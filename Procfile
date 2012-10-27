@@ -1,1 +1,1 @@
-web: lein run -m clojuremn.core
+web: lein trampoline run
