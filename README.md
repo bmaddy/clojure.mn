@@ -8,7 +8,7 @@ $$
 $$
 
 ## Thanks to:
-* Ben Peirce for originally maintaining and creating this site
+* [Ben Peirce](http://bpeirce.me) for originally maintaining and creating this site
 
 ## To Do:
 * TODO Add Google Analytics
