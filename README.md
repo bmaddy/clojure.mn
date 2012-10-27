@@ -11,4 +11,4 @@ The web site source for [clojure.mn](http://clojure.mn/), the Minnesota Clojure 
 * [Ben Peirce](http://bpeirce.me) for originally maintaining and creating this site
 
 ## To Do:
-* TODO Add Google Analytics
+* Add Google Analytics
