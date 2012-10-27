@@ -4,5 +4,6 @@
                  [ring/ring-core "0.3.11"]
                  [ring/ring-jetty-adapter "0.3.11"]
                  [hiccup "0.3.6"]]
+  :main clojuremn.core
   :dev-dependencies [[swank-clojure "1.3.0"]]
   :exclusions [org.mortbay.jetty/servlet-api])
