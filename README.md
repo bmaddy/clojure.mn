@@ -1,6 +1,6 @@
 # clojure.mn
 
-The web site source for clojure.mn, the Minnesota Clojure group.
+The web site source for [clojure.mn](http://clojure.mn/), the Minnesota Clojure group.
 
 ## LaTeX code for creating the lambda logo:
     $$
