@@ -47,7 +47,19 @@
       "."]
 
 
-     [:h2 "Next Meeting: Wednesday, November 7th"]
+
+
+
+     [:h2 "Next Meeting: Wednesday, December 5th, 2012"]
+
+     [:h2 "November 7th, 2012"]
+     [:p
+      "Hack Fest - Multiple small groups worked on all sorts of things including "
+      (link "Nongrata" "https://github.com/tmarble/nongrata") ", "
+      (link "Light Table" "http://www.lighttable.com/") ", "
+      (link "Clojure Koans" "http://clojurekoans.com/") ", "
+      (link "Conduit" "https://github.com/jduey/conduit") ", "
+      "and discussing Erlang's QuickCheck."]
 
      [:h2 "October 3, 2012"]
      [:p
