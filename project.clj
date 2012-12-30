@@ -6,5 +6,5 @@
                  [hiccup "0.3.6"]]
   :min-lein-version "2.0.0"
   :main clojuremn.core
-  :dev-dependencies [[swank-clojure "1.3.0"]]
+  :profiles {:dev {:dependencies [[ring-mock "0.1.3"]]}}
   :exclusions [org.mortbay.jetty/servlet-api])

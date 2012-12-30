@@ -50,7 +50,13 @@
 
 
 
-     [:h2 "Next Meeting: Wednesday, December 5th, 2012"]
+     ;[:h2 "Next Meeting: Wednesday, February 6h, 2012"]
+
+     [:h2 "No meeting in January"]
+
+     [:h2 "December 5th, 2012"]
+     [:p
+      "Greg Allen showed us a distance measuring project he's been working on, then we had various lightening talks."]
 
      [:h2 "November 7th, 2012"]
      [:p

@@ -1,6 +1,10 @@
 (ns clojuremn.test.core
-  (:use [clojuremn.core])
-  (:use [clojure.test]))
+  (:use clojuremn.core
+        ring.mock.request  
+        clojure.test))
 
-(deftest replace-me ;; FIXME: write
-  (is false "No tests have been written."))
+(deftest test-app
+  (testing "main route"
+           (let [response (app (request :get "/"))]
+             (is (= (:status response) 200)))))
+
