@@ -50,9 +50,9 @@
 
 
 
-     ;[:h2 "Next Meeting: Wednesday, February 6h, 2012"]
-
-     [:h2 "No meeting in January"]
+     [:h2 "Next Meeting: Wednesday, February 6h, 2012"]
+     [:p
+      "Hack Fest - Come with something to work on or learn about!"]
 
      [:h2 "December 5th, 2012"]
      [:p
