@@ -50,9 +50,11 @@
 
 
 
-     [:h2 "Next Meeting: Wednesday, February 6th, 2012"]
+     [:h2 "Next Meeting: Wednesday, March 6th, 2012"]
+
+     [:h2 "February 6th, 2012"]
      [:p
-      "Hack Fest - Come with something to work on or learn about!"]
+      (link "Benjamin Ebby") " showed us some of the ZeroMQ stuff he's been playing with recently and Daniel showed us the features of a ray-tracer he wrote in Clojure."]
 
      [:h2 "December 5th, 2012"]
      [:p
