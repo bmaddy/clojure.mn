@@ -50,7 +50,12 @@
 
 
 
-     [:h2 "Next Meeting: Wednesday, March 6th, 2012"]
+     [:h2 "Next Meeting: Wednesday, April 3rd, 2012"]
+
+     [:h2 "March 6th, 2012"]
+     [:p
+      (link "Erik Rantapaa") " talked about type classes and Haskell and "
+      (link "Brian Maddy") " gave a demo of a little " (link "game he made" "http://conbat.herokuapp.com/") " (" (link "source" "https://github.com/bmaddy/conbat") ")."]
 
      [:h2 "February 6th, 2012"]
      [:p
