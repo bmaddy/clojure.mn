@@ -43,8 +43,11 @@
      [:img {:id "logo" :src "/images/lambda.png"}]
 
      [:p "We meet the first Wednesday of the month at 7pm at "
-      (link "Refactr" "http://refactr.com/contact/")
-      "."]
+      (link "SmartThings" "http://www.smartthings.com/")
+      " (formerly Refactr)."]
+
+     [:p.map
+      (link "Map/directions" "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413+(SmartThings)&hl=en&sll=44.988865,-93.255102&sspn=0.010638,0.02708&hnear=11+4th+St+NE+%23300,+Minneapolis,+Hennepin,+Minnesota+55413&t=m&z=16&iwloc=A")]
 
 
 
