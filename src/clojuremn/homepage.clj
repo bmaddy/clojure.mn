@@ -66,7 +66,7 @@
 
      [:h2 "December 5th, 2012"]
      [:p
-      "Greg Allen showed us a distance measuring project he's been working on, then we had various lightening talks."]
+      "Greg Allen showed us a " (link "distance measuring project" "https://github.com/gdallen/walk") " he's been working on, then we had various lightening talks."]
 
      [:h2 "November 7th, 2012"]
      [:p
