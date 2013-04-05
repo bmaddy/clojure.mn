@@ -53,14 +53,18 @@
 
 
 
-     [:h2 "Next Meeting: Wednesday, April 3rd, 2012"]
+     [:h2 "Next Meeting: Wednesday, May 1st, 2013, at 7:00pm"]
 
-     [:h2 "March 6th, 2012"]
+     [:h2 "April 3rd, 2013"]
+     [:p
+      "Hack Fest"]
+
+     [:h2 "March 6th, 2013"]
      [:p
       (link "Erik Rantapaa") " talked about type classes and Haskell and "
       (link "Brian Maddy") " gave a demo of a little " (link "game he made" "http://conbat.herokuapp.com/") " (" (link "source" "https://github.com/bmaddy/conbat") ")."]
 
-     [:h2 "February 6th, 2012"]
+     [:h2 "February 6th, 2013"]
      [:p
       (link "Benjamin Ebby") " showed us some of the ZeroMQ stuff he's been playing with recently and Daniel showed us the features of a ray-tracer he wrote in Clojure."]
 
