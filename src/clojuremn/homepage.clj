@@ -1,17 +1,17 @@
 (ns clojuremn.homepage
   (:require [hiccup.page :refer [html5 include-css]]))
 
-(def common-links {
-    "Nick Bauman" "https://github.com/nickbauman/"
-    "Ben Peirce" "http://bpeirce.me"
-    "Benjamin Ebby" "http://twitter.com/akpanydre"
-    "Brian Maddy" "http://twitter.com/bmaddy"
-    "Dan Callahan" "http://dancallahan.info/"
-    "Tom Marble" "http://twitter.com/tmarble"
-    "Ted Naleid" "https://twitter.com/tednaleid"
-    "Scott Fritchie" "https://twitter.com/slfritchie"
-    "Nate Young" "https://twitter.com/natesbrain"
-  })
+(def common-links {"Andrew Luetgers" "https://twitter.com/lootsauce"
+                   "Nick Bauman" "https://github.com/nickbauman/"
+                   "Ben Peirce" "http://bpeirce.me"
+                   "Benjamin Ebby" "http://twitter.com/akpanydre"
+                   "Brian Maddy" "http://twitter.com/bmaddy"
+                   "Dan Callahan" "http://dancallahan.info/"
+                   "Tom Marble" "http://twitter.com/tmarble"
+                   "Ted Naleid" "https://twitter.com/tednaleid"
+                   "Scott Fritchie" "https://twitter.com/slfritchie"
+                   "Nate Young" "https://twitter.com/natesbrain"
+                   })
 
 (defn link
   ([name] (link name (common-links name)))
@@ -42,7 +42,7 @@
 
      [:p "We meet the first Wednesday of the month at 7pm at "
       (link "SmartThings" "http://www.smartthings.com/")
-      " (formerly Refactr)."]
+      "."]
 
      [:p.map
       (link "Map/directions" "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413+(SmartThings)&hl=en&sll=44.988865,-93.255102&sspn=0.010638,0.02708&hnear=11+4th+St+NE+%23300,+Minneapolis,+Hennepin,+Minnesota+55413&t=m&z=16&iwloc=A")]
@@ -51,7 +51,16 @@
 
 
 
-     [:h2 "Next Meeting: Wednesday, May 1st, 2013, at 7:00pm"]
+     [:h2 "Next Meeting: Wednesday, June 5th, 2013, at 7:00pm"]
+
+     [:h2 "May 1st, 2013"]
+     [:p
+      (link "Greg Allen") " taught us about testing in Clojure, "
+      (link "Andrew Luetgers") " showed us his "
+      (link "mr-hiccup" "https://github.com/andrewluetgers/mr-hiccup") " project he's been working on, "
+      (link "Tom Marble") " gave us an update on "
+      (link "Nongrata" "https://github.com/tmarble/nongrata") ", and "
+      (link "Brian Maddy") " gave a quick preview of the schelling visualization app he's working on."]
 
      [:h2 "April 3rd, 2013"]
      [:p
@@ -68,7 +77,7 @@
 
      [:h2 "December 5th, 2012"]
      [:p
-      "Greg Allen showed us a " (link "distance measuring project" "https://github.com/gdallen/walk") " he's been working on, then we had various lightening talks."]
+      (link "Greg Allen") " showed us a " (link "distance measuring project" "https://github.com/gdallen/walk") " he's been working on, then we had various lightening talks."]
 
      [:h2 "November 7th, 2012"]
      [:p
@@ -179,7 +188,7 @@
 
     [:h2 "October 5, 2011"]
      [:p
-      "Greg Allen talked about Clojure's "
+      (link "Greg Allen") " talked about Clojure's "
       (link "java interop" "https://docs.google.com/present/edit?id=0AVDE9VMKvEjHZGdrZzJwcjJfMTEyYzZ6NmJwZHE&hl=en_US")
       " and " (link "Ben Peirce") " talked about the relational algebra as its used in Clojure.sets."]
 
