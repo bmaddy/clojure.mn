@@ -1,17 +1,18 @@
 (ns clojuremn.core
-  (:use ring.adapter.jetty
-        ring.middleware.file
-        ring.middleware.file-info
-        clojuremn.homepage))
+  (:require [ring.adapter.jetty :refer [run-jetty]]
+            [ring.middleware.resource :refer [wrap-resource]]
+            [ring.middleware.file-info :refer [wrap-file-info]]
+            [clojuremn.homepage :refer [index]]))
 
 (defn handler [req]
+
   {:status   200
    :headers {"Content-Type" "text/html"}
-   :body    (index-body)})
+   :body    (index)})
 
 (def app
-  (-> #'handler
-      (wrap-file "resources/public")
+  (-> handler
+      (wrap-resource "public")
       (wrap-file-info)))
 
 (defn -main []

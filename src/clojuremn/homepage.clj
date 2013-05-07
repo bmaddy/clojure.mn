@@ -1,6 +1,5 @@
 (ns clojuremn.homepage
-  (:use [hiccup.core :only [html h]]
-        [hiccup.page-helpers :only [doctype include-css]]))
+  (:require [hiccup.page :refer [html5 include-css]]))
 
 (def common-links {
     "Nick Bauman" "https://github.com/nickbauman/"
@@ -22,9 +21,8 @@
       name)))
 
 
-(defn index-body []
-  (html
-   (doctype :html5)
+(defn index []
+  (html5
    [:head
     [:meta {:charset "utf-8"}]
     [:title "Clojure.mn - The Minnesota Clojure User Group"]
@@ -97,13 +95,13 @@
       " structure"]
 
      [:h2 "August 1, 2012"]
-     [:p 
+     [:p
       (link "Ben Peirce") " - "(link "Immutant" "http://immutant.org/")
       [:br]
       (link "Scott Fritchie") " - Creating systems with thousands or millions of actors "]
 
      [:h2 "June 6, 2012"]
-     [:p 
+     [:p
       (link "Nick Bauman")
       " presented his ClojureScript work on the "
       (link "Nongrata" "https://github.com/tmarble/nongrata")
@@ -164,7 +162,7 @@
       "."]
 
      [:h2 "December 7, 2011"]
-     [:p 
+     [:p
       (link "Brian Maddy") " and " (link "Ben Peirce") " gave a review of "
       (link "Clojure/conj 2011" "http://clojure-conj.org/")
       " and "
@@ -174,19 +172,19 @@
       "'s approach to concurrency."]
 
      [:h2 "November 2, 2011"]
-     [:p 
+     [:p
       (link "Brian Maddy") " talked about "
       (link "Functional Relational Programming" "https://docs.google.com/a/brianmaddy.com/presentation/pub?id=1kXvRBksA7DtDpie3JOU7vY2VH23yLFpUVFc98BYLKnk&start=false&loop=false&delayms=3000#slide=id.p")
       " and " (link "Ben Peirce") " talked about some tools for command line Clojure programs."]
 
     [:h2 "October 5, 2011"]
-     [:p 
+     [:p
       "Greg Allen talked about Clojure's "
       (link "java interop" "https://docs.google.com/present/edit?id=0AVDE9VMKvEjHZGdrZzJwcjJfMTEyYzZ6NmJwZHE&hl=en_US")
       " and " (link "Ben Peirce") " talked about the relational algebra as its used in Clojure.sets."]
 
      [:h2 "September 7, 2011"]
-     [:p 
+     [:p
       (link "Ben Peirce") " talked about "
       (link "Clojure sequence implementations" "http://bpeirce.me/clojure-sequence-implementations.html")
       " and " (link "Brian Maddy") " talked about "
@@ -194,7 +192,7 @@
       "."]
 
      [:h2 "August 10, 2011"]
-     [:p 
+     [:p
       (link "Ben Peirce") " walked through how he used "
       (link "Ring" "https://github.com/mmcgrana/ring")
       " and "
@@ -206,7 +204,7 @@
       (link "Enlive" "https://github.com/cgrand/enlive")
       " for one of his sites."
       ]
-      
+
      [:h2 "July 13, 2011"]
      [:p "We discussed "
       (link "Clojure/conj 2011" "http://clojure-conj.org")
