@@ -7,6 +7,7 @@
                    "Benjamin Ebby" "http://twitter.com/akpanydre"
                    "Brian Maddy" "http://twitter.com/bmaddy"
                    "Dan Callahan" "http://dancallahan.info/"
+                   "Professor Machkasova" "http://personal.morris.umn.edu/~elenam/"
                    "Tom Marble" "http://twitter.com/tmarble"
                    "Ted Naleid" "https://twitter.com/tednaleid"
                    "Scott Fritchie" "https://twitter.com/slfritchie"
@@ -51,7 +52,11 @@
 
 
 
-     [:h2 "Next Meeting: Wednesday, June 5th, 2013, at 7:00pm"]
+     [:h2 "Next Meeting: Wednesday, July 3rd, 2013, at 7:00pm"]
+
+     [:h2 "June 5th, 2013"]
+     [:p
+      (link "Professor Machkasova") " from the University of Minnesota Morris presented the work she and " (link "Stephen Adams") " have been doing to transition the university's introductory computer science class from Racket to Clojure."]
 
      [:h2 "May 1st, 2013"]
      [:p
