@@ -52,7 +52,11 @@
 
 
 
-     [:h2 "Next Meeting: Wednesday, July 3rd, 2013, at 7:00pm"]
+     [:h2 "Next Meeting: Wednesday, August 7th, 2013, at 7:00pm"]
+
+     [:h2 "July 3rd, 2013"]
+     [:p
+      "Hack Fest"]
 
      [:h2 "June 5th, 2013"]
      [:p
