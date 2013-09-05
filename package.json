@@ -2,7 +2,6 @@
   "name": "clojure.mn",
   "version": "2.0.1",
   "dependencies": {
-    "mmmagic": "0.3.x",
     "node-static": "0.7.x"
   },
   "engines": {
