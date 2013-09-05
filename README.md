@@ -3,8 +3,9 @@
 The web site source for [clojure.mn](http://clojure.mn/), the Minnesota Clojure group.
 
 ## Development:
-The target/cljsbuild-main.js file is checked in so it's available for
-nodejs on Heroku. It is not automatically generated on Heroku's servers.
+After changing things, you *must* run cljsbuild to re-generate
+target/cljsbuild-main.js. This file is checked in so the nodejs
+buildpack can use it.
 
 ## LaTeX code for creating the lambda logo:
     $$

@@ -58,8 +58,12 @@
 
 
 
-     [:h2 "Next Meeting: Wednesday, September 4th, 2013, at 7:00pm"]
+     [:h2 "Next Meeting: Wednesday, October 2nd, 2013, at 7:00pm"]
 
+     [:h2 "September 4th, 2013"]
+     [:p
+      "Hack Fest"]
+     
      [:h2 "August 7st, 2013"]
      [:p
       (link "Dan Callahan") " showed us some quick tips for better website security"]
