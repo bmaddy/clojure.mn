@@ -1,1 +1,1 @@
-web: lein trampoline run
+web: node target/cljsbuild-main.js
