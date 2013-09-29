@@ -10,9 +10,7 @@
          "Scott Fritchie" "https://twitter.com/slfritchie"
          "Nate Young" "https://twitter.com/natesbrain"
          }
- :meetings [{:date "2013-10-02"
-             :desc "FIXME"}
-            {:date "2013-09-04"
+ :meetings [{:date "2013-09-04"
              :desc ["Hack Fest"]
              :attendee-count 5}
             {:date "2013-08-07"
