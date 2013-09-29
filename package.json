@@ -2,7 +2,8 @@
   "name": "clojure.mn",
   "version": "2.0.1",
   "dependencies": {
-    "node-static": "0.7.x"
+    "node-static": "0.7.x",
+    "moment": "2.2.1"
   },
   "engines": {
     "node": "0.10.x",

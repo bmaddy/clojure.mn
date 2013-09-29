@@ -1,0 +1,178 @@
+{:links {"Andrew Luetgers" "https://twitter.com/lootsauce"
+         "Nick Bauman" "https://github.com/nickbauman/"
+         "Ben Peirce" "http://bpeirce.me"
+         "Benjamin Ebby" "http://twitter.com/akpanydre"
+         "Brian Maddy" "http://twitter.com/bmaddy"
+         "Dan Callahan" "http://dancallahan.info/"
+         "Professor Machkasova" "http://personal.morris.umn.edu/~elenam/"
+         "Tom Marble" "http://twitter.com/tmarble"
+         "Ted Naleid" "https://twitter.com/tednaleid"
+         "Scott Fritchie" "https://twitter.com/slfritchie"
+         "Nate Young" "https://twitter.com/natesbrain"
+         }
+ :meetings [{:date "2013-10-02"
+             :desc "FIXME"}
+            {:date "2013-09-04"
+             :desc ["Hack Fest"]
+             :attendee-count 5}
+            {:date "2013-08-07"
+             :desc [(link "Dan Callahan") " showed us some quick tips for better website security"]
+             :attendee-count 4}
+            {:date "2013-07-03"
+             :desc ["Hack Fest"]
+             :attendee-count 11}
+
+            {:date "2013-06-05"
+             :desc [(link "Professor Machkasova") " from the University of Minnesota Morris presented the work she and " (link "Stephen Adams") " have been doing to transition the university's introductory computer science class from Racket to Clojure."]
+             :attendee-count 20}
+
+            {:date "2013-05-01"
+             :desc [(link "Greg Allen") " taught us about testing in Clojure, "
+                    (link "Andrew Luetgers") " showed us his "
+                    (link "mr-hiccup" "https://github.com/andrewluetgers/mr-hiccup") " project he's been working on, "
+                    (link "Tom Marble") " gave us an update on "
+                    (link "Nongrata" "https://github.com/tmarble/nongrata") ", and "
+                    (link "Brian Maddy") " gave a quick preview of the schelling visualization app he's working on."]
+             :attendee-count 19}
+
+            {:date "2013-04-03"
+             :desc ["Hack Fest"]
+             :attendee-count 12}
+
+            {:date "2013-03-06"
+             :desc [(link "Erik Rantapaa") " talked about type classes and Haskell and "
+      (link "Brian Maddy") " gave a demo of a little " (link "game he made" "http://conbat.herokuapp.com/") " (" (link "source" "https://github.com/bmaddy/conbat") ")."]
+             :attendee-count 12}
+
+            {:date "2013-02-06"
+             :desc [(link "Benjamin Ebby") " showed us some of the ZeroMQ stuff he's been playing with recently and Daniel showed us the features of a ray-tracer he wrote in Clojure."]
+             :attendee-count 5}
+
+            {:date "2012-12-05"
+             :desc [(link "Greg Allen") " showed us a " (link "distance measuring project" "https://github.com/gdallen/walk") " he's been working on, then we had various lightening talks."]}
+            
+            {:date "2012-11-07"
+             :desc ["Hack Fest - Multiple small groups worked on all sorts of things including "
+                    (link "Nongrata" "https://github.com/tmarble/nongrata") ", "
+                    (link "Light Table" "http://www.lighttable.com/") ", "
+                    (link "Clojure Koans" "http://clojurekoans.com/") ", "
+                    (link "Conduit" "https://github.com/jduey/conduit") ", "
+                    "and discussing Erlang's QuickCheck."]
+             :attendee-count 13}
+
+            {:date "2012-10-03"
+             :desc ["Hack Fest - We went through the " (link "Datomic tutorial" "http://docs.datomic.com/tutorial.html")]}
+
+            {:date "2012-09-05"
+             :desc [(link "Nate Young") " - using clojure at "
+                    (link "Revelytix" "http://www.revelytix.com/")
+                    [:br]
+                    (link "Brian Maddy") " - "
+                    (link "Tetris" "https://github.com/bmaddy/tetris")
+                    " with an "
+                    (link "FRP" "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.93.8928")
+                    " structure"]}
+
+            {:date "2012-08-01"
+             :desc [(link "Ben Peirce") " - "(link "Immutant" "http://immutant.org/")
+                    [:br]
+                    (link "Scott Fritchie") " - Creating systems with thousands or millions of actors "]}
+
+            {:date "2012-06-06"
+             :desc [(link "Nick Bauman")
+                    " presented his ClojureScript work on the "
+                    (link "Nongrata" "https://github.com/tmarble/nongrata")
+                    " project.  We then held lightning talks with "
+                    (link "Dan Callahan")
+                    " discussing "
+                    (link "Persona" "http://identity.mozilla.com/post/18038609895/introducing-mozilla-persona")
+                    ", "
+                    (link "Tom Marble")
+                    " demoing his "
+                    (link "Raspberry Pi" "http://www.raspberrypi.org/")
+                    " serving the Nongrata website, and "
+                    (link "Brian Maddy")
+                    " talking about "
+                    (link "core.logic" "https://github.com/clojure/core.logic")
+                    "."]}
+
+            {:date "2012-05-02"
+             :desc [(link "Dan Callahan")
+                    " talked about "
+                    (link "Mozilla Persona" "http://identity.mozilla.com/post/18038609895/introducing-mozilla-persona")
+                    " and the group hacked on a "
+                    (link "Noir implementation of that technology" "https://github.com/tmarble/nongrata")
+                    "."]}
+
+            {:date "2012-04-04"
+             :desc [(link "Ted Naleid")
+                    " gave his "
+                    (link "review of Clojure/West 2012" "http://tednaleid.github.com/showoff-clojurewest/#1")
+                    " and "
+                    (link "Ben Peirce")
+                    " talked about "
+                    (link "some random Clojure news" "/presentations/latest-news/latest-news.html")
+                    "."]}
+
+            {:date "2012-03-07"
+             :desc [(link "Nick Bauman")
+                    " talked about "
+                    (link "redit-s-expression" "http://tinyurl.com/redis-s-expression")
+                    " and "
+                    (link "Brian Maddy")
+                    " talked about "
+                    (link "Pallet" "https://docs.google.com/file/d/0B593N-xk-VfFVTJtNndQZk1UbFNRc1MzXzFxR21pZw/edit")
+                    "."]}
+
+            {:date "2012-02-01"
+             :desc [(link "Tom Marble")
+                    " shared his experiences "
+                    (link "developing a web application using Noir" "/presentations/noir-is-the-new-black.org")
+                    " and "
+                    (link "Benjamin Ebby")
+                    " talked about "
+                    (link "using JRuby and Rake with Clojure" "http://outcastgeek.com/blog/build-your-polyglot-app-with-jruby-and-rake.html")
+                    "."]}
+
+            {:date "2011-12-07"
+             :desc [(link "Brian Maddy") " and " (link "Ben Peirce") " gave a review of "
+                    (link "Clojure/conj 2011" "http://clojure-conj.org/")
+                    " and "
+                    (link "Dan Callahan")
+                    " talked about "
+                    (link "Go" "http://golang.org/")
+                    "'s approach to concurrency."]}
+
+            {:date "2011-11-02"
+             :desc [(link "Brian Maddy") " talked about "
+                    (link "Functional Relational Programming" "https://docs.google.com/a/brianmaddy.com/presentation/pub?id=1kXvRBksA7DtDpie3JOU7vY2VH23yLFpUVFc98BYLKnk&start=false&loop=false&delayms=3000#slide=id.p")
+                    " and " (link "Ben Peirce") " talked about some tools for command line Clojure programs."]}
+
+            {:date "2011-10-05"
+             :desc [(link "Greg Allen") " talked about Clojure's "
+                    (link "java interop" "https://docs.google.com/present/edit?id=0AVDE9VMKvEjHZGdrZzJwcjJfMTEyYzZ6NmJwZHE&hl=en_US")
+                    " and " (link "Ben Peirce") " talked about the relational algebra as its used in Clojure.sets."]}
+
+            {:date "2011-09-07"
+             :desc [(link "Ben Peirce") " talked about "
+                    (link "Clojure sequence implementations" "http://bpeirce.me/clojure-sequence-implementations.html")
+                    " and " (link "Brian Maddy") " talked about "
+                    (link "ClojureScript" "https://docs.google.com/a/brianmaddy.com/present/view?id=dwqzvn5_14f7nm7ngk")
+                    "."]}
+
+            {:date "2011-08-10"
+             :desc [(link "Ben Peirce") " walked through how he used "
+                    (link "Ring" "https://github.com/mmcgrana/ring")
+                    " and "
+                    (link "Hiccup" "https://github.com/weavejester/hiccup")
+                    " to make "
+                    (link "this site" "https://github.com/bpeirce/clojure.mn")
+                    ".  "
+                    (link "Brian Maddy") " showed how he used "
+                    (link "Enlive" "https://github.com/cgrand/enlive")
+                    " for one of his sites."]}
+
+            {:date "2011-07-13"
+             :desc ["We discussed "
+                    (link "Clojure/conj 2011" "http://clojure-conj.org")
+                    ", compared the JVM to the CLR, and surveyed the NoSQL landscape."]}]}
