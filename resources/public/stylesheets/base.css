@@ -1,33 +1,25 @@
 body {
-    font-family: Georgia, Serif;
+    font-size: 16px;
 }
 
 h1 {
-    font-family: Sans-Serif;
     font-size: 60px;
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 2px;
-    margin-bottom: 0;
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 15px;
-    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
     margin-top: 30px;
-    margin-bottom: 5px;
 }
 
-.map {
-  text-align: center;
-}
-
-p {
+.panel-body h2 {
     margin-top: 10px;
 }
 
-a {
+a, a:hover {
     color: #000;
+    text-decoration: underline;
 }
 
 a:visited {
@@ -35,38 +27,6 @@ a:visited {
 }
 
 img#logo {
-    margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#tagline {
-    font-style: italic;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.announcement {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 40px;
-}
-
-#clojure-j {
-    font-style: italic;
-    padding-right: 6px;
-}
-
-div#content {
-    left: 50%;
-    width: 400px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    height: 62px;
+    width: 43px;
 }

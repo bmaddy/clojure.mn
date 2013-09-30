@@ -33,7 +33,7 @@
 (defn upcoming-meeting [today meetings]
   (let [today-str (.format today "YYYY-MM-DD")
         next-month-str (.format (.add today "months" 1) "YYYY-MM-DD")]
-    (first (filter #(and (<= today-str (:date %))
+    (last (filter #(and (<= today-str (:date %))
                          (< (:date %) next-month-str))
                    meetings))))
 
@@ -49,46 +49,54 @@
 (defn index []
   (html5
    [:head
-    [:meta {:charset "utf-8"}]
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
     [:title "Clojure.mn - The Minnesota Clojure User Group"]
-    [:link {:rel "stylesheet" :type "text/css" :href "/stylesheets/base.css"}]]
+    [:link {:rel "stylesheet" :href "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"}]
+    [:link {:rel "stylesheet" :type "text/css" :href "/stylesheets/base.css"}]
+    ]
    [:body
-    [:div {:id "content"}
-     [:h1 "Clo" [:span {:id "clojure-j"} "j"] "ure.mn"]
-     [:p {:id "tagline"} "The Minnesota Clojure Users Group"]
-     [:p {:class "announcement"}
-      "Join our "
-      [:a {:href "http://groups.google.com/group/clojuremn"} "mailing list" ]
-      ". Follow us on "
-      [:a {:href "http://twitter.com/clojuremn"} "Twitter"]
-      "."
-      ]
-     [:img {:id "logo" :src "/images/lambda.png"}]
+    [:div#content.container
+     [:div.row
+      ;; using "." syntax for 3+ classes doesn't work right in hiccups
+      ;; 0.2.0, fixed in 0.3.0
+      [:div {:class "col-sm-offset-3 col-sm-6 text-center"}
+       [:h1 "Clo" [:em "j"] "ure.mn"]
+       [:p [:em "The Minnesota Clojure Users Group"]]
+       [:p
+        "Join our "
+        [:a {:href "http://groups.google.com/group/clojuremn"} "mailing list" ]
+        ". Follow us on "
+        [:a {:href "http://twitter.com/clojuremn"} "Twitter"]
+        "."
+        ]
+       [:img {:id "logo" :src "/images/lambda.png"}]
 
-     [:p "We meet the first Wednesday of the month at 7pm at "
-      [:a {:href "http://www.smartthings.com/"} "SmartThings"]
-      "."]
+       [:p.text-center "We meet the first Wednesday of the month at 7pm at&nbsp;"
+        [:a {:href "http://www.smartthings.com/"} "SmartThings"]
+        "."]
 
-     [:p.map
-      [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413+(SmartThings)&hl=en&sll=44.988865,-93.255102&sspn=0.010638,0.02708&hnear=11+4th+St+NE+%23300,+Minneapolis,+Hennepin,+Minnesota+55413&t=m&z=16&iwloc=A"} "Map/directions"]]
+       [:p.map
+        [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413&hl=en&sll=44.988878,-93.255115&sspn=0.0095,0.02032&vpsrc=0&hnear=11+4th+St+NE,+Minneapolis,+Minnesota+55413&t=m&z=16"} "Map/directions"]]
 
 
-     (let [meetings (meetings)]
-       (list*
-        (if-let [{:keys [date desc]} (upcoming-meeting (today) meetings)]
-          (let [date-str (-> date (moment "YYYY-MM-DD") (.format "dddd, MMMM Do, YYYY"))]
-            [:div.upcoming-meeting
-             [:h2 "Upcoming Meeting: " date-str ", at 7:00pm"]
-             #_[:p desc]]))
+       (let [meetings (meetings)]
+         (list*
+          (if-let [{:keys [date desc]} (upcoming-meeting (today) meetings)]
+            (let [date-str (-> date (moment "YYYY-MM-DD") (.format "dddd, MMMM Do, YYYY"))]
+              [:div.panel.panel-default
+               [:div.panel-heading.text-left [:em "Upcoming Meeting..."]]
+               [:div.panel-body
+                [:h2 date-str ", at&nbsp;7:00pm"]
+                [:p desc]]]))
 
-        (for [{:keys [date desc]} (past-meetings (today) meetings)]
-          [:div.meeting
-           [:h2 (-> date
-                    (moment "YYYY-MM-DD")
-                    (.format "MMMM Do, YYYY"))]
-           [:p desc]])))
-     ]
+          (for [{:keys [date desc]} (past-meetings (today) meetings)]
+            [:div.meeting
+             [:h2 (-> date
+                      (moment "YYYY-MM-DD")
+                      (.format "MMMM Do, YYYY"))]
+             [:p.text-left desc]])))
+       
 
-    [:p {:class "footer"}
-     [:a {:href "https://github.com/bmaddy/clojure.mn"} "Fork this site!"]]
+       [:p {:class "footer"}
+        [:a {:href "https://github.com/bmaddy/clojure.mn"} "Fork this site!"]]]]]
     ]))

@@ -10,7 +10,11 @@
          "Scott Fritchie" "https://twitter.com/slfritchie"
          "Nate Young" "https://twitter.com/natesbrain"
          }
- :meetings [{:date "2013-10-02"
+ :meetings [{:date "2013-12-04"
+             :desc [(link "Erik Rantapaa") ": Ad-hoc Logic - Sum Types and Pattern Matching"]}
+            {:date "2013-11-06"
+             :desc ["Beginner's night"]}
+            {:date "2013-10-02"
              :desc [(link "Danny Gratzer") ": a talk about Haskell"
                     [:br]
                     (link "Aaron Babcock") ": Clojure on AppEngine"]}
