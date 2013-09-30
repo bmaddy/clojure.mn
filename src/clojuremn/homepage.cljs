@@ -14,15 +14,31 @@
        [:a {:href url} name]
        name)))
 
-(def meetings
+(defn meetings []
   (let [data (edn/read-string (.readFileSync fs "meetings.edn" "utf8"))
         link (partial make-link data)]
-    (for [meeting (data :meetings)]
-      (assoc meeting :desc
-             (for [[f & args :as str] (meeting :desc)]
-               (if (= 'link f)
-                 (apply link args)
-                 str))))))
+    (reverse
+     (sort-by :date (for [meeting (data :meetings)]
+                   (assoc meeting :desc
+                          (for [[f & args :as str] (meeting :desc)]
+                            (if (= 'link f)
+                              (apply link args)
+                              str))))))))
+
+;; function because we want to use the *current* time
+(defn today []
+  (let [offset (if (-> moment .utc .isDST) "-0600" "-0500")]
+    (.zone (moment) offset)))
+
+(defn upcoming-meeting [today meetings]
+  (let [today-str (.format today "YYYY-MM-DD")
+        next-month-str (.format (.add today "months" 1) "YYYY-MM-DD")]
+    (first (filter #(and (<= today-str (:date %))
+                         (< (:date %) next-month-str))
+                   meetings))))
+
+(defn past-meetings [today meetings]
+  (filter #(< (:date %) (.format today "YYYY-MM-DD")) meetings))
 
 (defn html5 [& content]
   (str "<!DOCTYPE html>"
@@ -57,16 +73,20 @@
       [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413+(SmartThings)&hl=en&sll=44.988865,-93.255102&sspn=0.010638,0.02708&hnear=11+4th+St+NE+%23300,+Minneapolis,+Hennepin,+Minnesota+55413&t=m&z=16&iwloc=A"} "Map/directions"]]
 
 
-     [:h2 "Next Meeting: Wednesday, October 2nd, 2013, at 7:00pm"]
+     (let [meetings (meetings)]
+       (list*
+        (if-let [{:keys [date desc]} (upcoming-meeting (today) meetings)]
+          (let [date-str (-> date (moment "YYYY-MM-DD") (.format "dddd, MMMM Do, YYYY"))]
+            [:div.upcoming-meeting
+             [:h2 "Upcoming Meeting: " date-str ", at 7:00pm"]
+             #_[:p desc]]))
 
-     (for [{:keys [date desc]} meetings]
-       [:div.meeting
-        [:h2 (-> date
-                 (str "Z")
-                 moment
-                 .utc
-                 (.format "MMMM Do, YYYY"))]
-        [:p desc]])
+        (for [{:keys [date desc]} (past-meetings (today) meetings)]
+          [:div.meeting
+           [:h2 (-> date
+                    (moment "YYYY-MM-DD")
+                    (.format "MMMM Do, YYYY"))]
+           [:p desc]])))
      ]
 
     [:p {:class "footer"}

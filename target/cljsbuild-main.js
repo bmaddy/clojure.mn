@@ -14528,106 +14528,124 @@ clojuremn.homepage.make_link = function() {
 }();
 clojuremn.homepage.meetings = function() {
   var a = cljs.reader.read_string.call(null, clojuremn.homepage.fs.readFileSync("meetings.edn", "utf8")), b = cljs.core.partial.call(null, clojuremn.homepage.make_link, a);
-  return function d(a) {
-    return new cljs.core.LazySeq(null, !1, function() {
-      for(;;) {
-        var f = cljs.core.seq.call(null, a);
-        if(f) {
-          var g = f;
-          if(cljs.core.chunked_seq_QMARK_.call(null, g)) {
-            var h = cljs.core.chunk_first.call(null, g), k = cljs.core.count.call(null, h), l = cljs.core.chunk_buffer.call(null, k);
-            return function() {
-              for(var a = 0;;) {
-                if(a < k) {
-                  var d = cljs.core._nth.call(null, h, a);
-                  cljs.core.chunk_append.call(null, l, cljs.core.assoc.call(null, d, new cljs.core.Keyword(null, "desc", "desc", 1016984067), function() {
-                    return function(a, d, e, f, g, h, k) {
-                      return function F(l) {
-                        return new cljs.core.LazySeq(null, !1, function(a, d, e, f, g, h, k) {
-                          return function() {
-                            for(;;) {
-                              var a = cljs.core.seq.call(null, l);
-                              if(a) {
-                                if(cljs.core.chunked_seq_QMARK_.call(null, a)) {
-                                  var d = cljs.core.chunk_first.call(null, a), e = cljs.core.count.call(null, d), f = cljs.core.chunk_buffer.call(null, e);
-                                  a: {
-                                    for(var g = 0;;) {
-                                      if(g < e) {
-                                        var h = cljs.core._nth.call(null, d, g), k = cljs.core.nth.call(null, h, 0, null), m = cljs.core.nthnext.call(null, h, 1);
-                                        cljs.core.chunk_append.call(null, f, cljs.core._EQ_.call(null, new cljs.core.Symbol(null, "link", "link", -1637209677, null), k) ? cljs.core.apply.call(null, b, m) : h);
-                                        g += 1
-                                      }else {
-                                        d = !0;
-                                        break a
+  return cljs.core.reverse.call(null, cljs.core.sort_by.call(null, new cljs.core.Keyword(null, "date", "date", 1016980256), function() {
+    return function d(a) {
+      return new cljs.core.LazySeq(null, !1, function() {
+        for(;;) {
+          var f = cljs.core.seq.call(null, a);
+          if(f) {
+            var g = f;
+            if(cljs.core.chunked_seq_QMARK_.call(null, g)) {
+              var h = cljs.core.chunk_first.call(null, g), k = cljs.core.count.call(null, h), l = cljs.core.chunk_buffer.call(null, k);
+              return function() {
+                for(var a = 0;;) {
+                  if(a < k) {
+                    var d = cljs.core._nth.call(null, h, a);
+                    cljs.core.chunk_append.call(null, l, cljs.core.assoc.call(null, d, new cljs.core.Keyword(null, "desc", "desc", 1016984067), function() {
+                      return function(a, d, e, f, g, h, k) {
+                        return function F(l) {
+                          return new cljs.core.LazySeq(null, !1, function(a, d, e, f, g, h, k) {
+                            return function() {
+                              for(;;) {
+                                var a = cljs.core.seq.call(null, l);
+                                if(a) {
+                                  if(cljs.core.chunked_seq_QMARK_.call(null, a)) {
+                                    var d = cljs.core.chunk_first.call(null, a), e = cljs.core.count.call(null, d), f = cljs.core.chunk_buffer.call(null, e);
+                                    a: {
+                                      for(var g = 0;;) {
+                                        if(g < e) {
+                                          var h = cljs.core._nth.call(null, d, g), k = cljs.core.nth.call(null, h, 0, null), m = cljs.core.nthnext.call(null, h, 1);
+                                          cljs.core.chunk_append.call(null, f, cljs.core._EQ_.call(null, new cljs.core.Symbol(null, "link", "link", -1637209677, null), k) ? cljs.core.apply.call(null, b, m) : h);
+                                          g += 1
+                                        }else {
+                                          d = !0;
+                                          break a
+                                        }
                                       }
+                                      d = void 0
                                     }
-                                    d = void 0
+                                    return d ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, f), F.call(null, cljs.core.chunk_rest.call(null, a))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, f), null)
                                   }
-                                  return d ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, f), F.call(null, cljs.core.chunk_rest.call(null, a))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, f), null)
+                                  e = cljs.core.first.call(null, a);
+                                  f = cljs.core.nth.call(null, e, 0, null);
+                                  d = cljs.core.nthnext.call(null, e, 1);
+                                  return cljs.core.cons.call(null, cljs.core._EQ_.call(null, new cljs.core.Symbol(null, "link", "link", -1637209677, null), f) ? cljs.core.apply.call(null, b, d) : e, F.call(null, cljs.core.rest.call(null, a)))
                                 }
-                                e = cljs.core.first.call(null, a);
-                                f = cljs.core.nth.call(null, e, 0, null);
-                                d = cljs.core.nthnext.call(null, e, 1);
-                                return cljs.core.cons.call(null, cljs.core._EQ_.call(null, new cljs.core.Symbol(null, "link", "link", -1637209677, null), f) ? cljs.core.apply.call(null, b, d) : e, F.call(null, cljs.core.rest.call(null, a)))
-                              }
-                              return null
-                            }
-                          }
-                        }(a, d, e, f, g, h, k), null)
-                      }
-                    }(a, d, h, k, l, g, f).call(null, d.call(null, new cljs.core.Keyword(null, "desc", "desc", 1016984067)))
-                  }()));
-                  a += 1
-                }else {
-                  return!0
-                }
-              }
-            }() ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, l), d.call(null, cljs.core.chunk_rest.call(null, g))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, l), null)
-          }
-          var m = cljs.core.first.call(null, g);
-          return cljs.core.cons.call(null, cljs.core.assoc.call(null, m, new cljs.core.Keyword(null, "desc", "desc", 1016984067), function() {
-            return function(a, d, e) {
-              return function r(f) {
-                return new cljs.core.LazySeq(null, !1, function(a, d, e) {
-                  return function() {
-                    for(;;) {
-                      var a = cljs.core.seq.call(null, f);
-                      if(a) {
-                        if(cljs.core.chunked_seq_QMARK_.call(null, a)) {
-                          var d = cljs.core.chunk_first.call(null, a), e = cljs.core.count.call(null, d), g = cljs.core.chunk_buffer.call(null, e);
-                          a: {
-                            for(var h = 0;;) {
-                              if(h < e) {
-                                var k = cljs.core._nth.call(null, d, h), l = cljs.core.nth.call(null, k, 0, null), m = cljs.core.nthnext.call(null, k, 1);
-                                cljs.core.chunk_append.call(null, g, cljs.core._EQ_.call(null, new cljs.core.Symbol(null, "link", "link", -1637209677, null), l) ? cljs.core.apply.call(null, b, m) : k);
-                                h += 1
-                              }else {
-                                d = !0;
-                                break a
+                                return null
                               }
                             }
-                            d = void 0
-                          }
-                          return d ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, g), r.call(null, cljs.core.chunk_rest.call(null, a))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, g), null)
+                          }(a, d, e, f, g, h, k), null)
                         }
-                        e = cljs.core.first.call(null, a);
-                        g = cljs.core.nth.call(null, e, 0, null);
-                        d = cljs.core.nthnext.call(null, e, 1);
-                        return cljs.core.cons.call(null, cljs.core._EQ_.call(null, new cljs.core.Symbol(null, "link", "link", -1637209677, null), g) ? cljs.core.apply.call(null, b, d) : e, r.call(null, cljs.core.rest.call(null, a)))
-                      }
-                      return null
-                    }
+                      }(a, d, h, k, l, g, f).call(null, d.call(null, new cljs.core.Keyword(null, "desc", "desc", 1016984067)))
+                    }()));
+                    a += 1
+                  }else {
+                    return!0
                   }
-                }(a, d, e), null)
-              }
-            }(m, g, f).call(null, m.call(null, new cljs.core.Keyword(null, "desc", "desc", 1016984067)))
-          }()), d.call(null, cljs.core.rest.call(null, g)))
+                }
+              }() ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, l), d.call(null, cljs.core.chunk_rest.call(null, g))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, l), null)
+            }
+            var m = cljs.core.first.call(null, g);
+            return cljs.core.cons.call(null, cljs.core.assoc.call(null, m, new cljs.core.Keyword(null, "desc", "desc", 1016984067), function() {
+              return function(a, d, e) {
+                return function r(f) {
+                  return new cljs.core.LazySeq(null, !1, function(a, d, e) {
+                    return function() {
+                      for(;;) {
+                        var a = cljs.core.seq.call(null, f);
+                        if(a) {
+                          if(cljs.core.chunked_seq_QMARK_.call(null, a)) {
+                            var d = cljs.core.chunk_first.call(null, a), e = cljs.core.count.call(null, d), g = cljs.core.chunk_buffer.call(null, e);
+                            a: {
+                              for(var h = 0;;) {
+                                if(h < e) {
+                                  var k = cljs.core._nth.call(null, d, h), l = cljs.core.nth.call(null, k, 0, null), m = cljs.core.nthnext.call(null, k, 1);
+                                  cljs.core.chunk_append.call(null, g, cljs.core._EQ_.call(null, new cljs.core.Symbol(null, "link", "link", -1637209677, null), l) ? cljs.core.apply.call(null, b, m) : k);
+                                  h += 1
+                                }else {
+                                  d = !0;
+                                  break a
+                                }
+                              }
+                              d = void 0
+                            }
+                            return d ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, g), r.call(null, cljs.core.chunk_rest.call(null, a))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, g), null)
+                          }
+                          e = cljs.core.first.call(null, a);
+                          g = cljs.core.nth.call(null, e, 0, null);
+                          d = cljs.core.nthnext.call(null, e, 1);
+                          return cljs.core.cons.call(null, cljs.core._EQ_.call(null, new cljs.core.Symbol(null, "link", "link", -1637209677, null), g) ? cljs.core.apply.call(null, b, d) : e, r.call(null, cljs.core.rest.call(null, a)))
+                        }
+                        return null
+                      }
+                    }
+                  }(a, d, e), null)
+                }
+              }(m, g, f).call(null, m.call(null, new cljs.core.Keyword(null, "desc", "desc", 1016984067)))
+            }()), d.call(null, cljs.core.rest.call(null, g)))
+          }
+          return null
         }
-        return null
-      }
-    }, null)
-  }.call(null, a.call(null, new cljs.core.Keyword(null, "meetings", "meetings", 4447138058)))
-}();
+      }, null)
+    }.call(null, a.call(null, new cljs.core.Keyword(null, "meetings", "meetings", 4447138058)))
+  }()))
+};
+clojuremn.homepage.today = function() {
+  var a = cljs.core.truth_(clojuremn.homepage.moment.utc().isDST()) ? "-0600" : "-0500";
+  return clojuremn.homepage.moment.call(null).zone(a)
+};
+clojuremn.homepage.upcoming_meeting = function(a, b) {
+  var c = a.format("YYYY-MM-DD"), d = a.add("months", 1).format("YYYY-MM-DD");
+  return cljs.core.first.call(null, cljs.core.filter.call(null, function(a) {
+    var b = c <= (new cljs.core.Keyword(null, "date", "date", 1016980256)).call(null, a);
+    return b ? (new cljs.core.Keyword(null, "date", "date", 1016980256)).call(null, a) < d : b
+  }, b))
+};
+clojuremn.homepage.past_meetings = function(a, b) {
+  return cljs.core.filter.call(null, function(b) {
+    return(new cljs.core.Keyword(null, "date", "date", 1016980256)).call(null, b) < a.format("YYYY-MM-DD")
+  }, b)
+};
 clojuremn.homepage.html5 = function() {
   var a = function(a) {
     return[cljs.core.str("\x3c!DOCTYPE html\x3e"), cljs.core.str("\x3chtml\x3e"), cljs.core.str("" + cljs.core.str(hiccups.runtime.render_html.call(null, a))), cljs.core.str("\x3c/html\x3e")].join("")
@@ -14652,40 +14670,46 @@ clojuremn.homepage.index = function() {
   "href", "href", 1017115293), "http://groups.google.com/group/clojuremn"], !0), "mailing list"], !0), ". Follow us on ", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "http://twitter.com/clojuremn"], !0), "Twitter"], !0), "."], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "img", "img", 1014008629), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, 
   "id", "id", 1013907597), "logo", new cljs.core.Keyword(null, "src", "src", 1014018390), "/images/lambda.png"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), "We meet the first Wednesday of the month at 7pm at ", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "http://www.smartthings.com/"], !0), "SmartThings"], 
   !0), "."], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.map", "p.map", 1118816848), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "https://maps.google.com/maps?q\x3d11+4th+St+NE+%23300+Minneapolis,+MN+55413+(SmartThings)\x26hl\x3den\x26sll\x3d44.988865,-93.255102\x26sspn\x3d0.010638,0.02708\x26hnear\x3d11+4th+St+NE+%23300,+Minneapolis,+Hennepin,+Minnesota+55413\x26t\x3dm\x26z\x3d16\x26iwloc\x3dA"], 
-  !0), "Map/directions"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), "Next Meeting: Wednesday, October 2nd, 2013, at 7:00pm"], !0), function() {
-    return function b(c) {
-      return new cljs.core.LazySeq(null, !1, function() {
-        for(;;) {
-          var d = cljs.core.seq.call(null, c);
-          if(d) {
-            if(cljs.core.chunked_seq_QMARK_.call(null, d)) {
-              var e = cljs.core.chunk_first.call(null, d), f = cljs.core.count.call(null, e), g = cljs.core.chunk_buffer.call(null, f);
-              a: {
-                for(var h = 0;;) {
-                  if(h < f) {
-                    var k = cljs.core._nth.call(null, e, h), l = cljs.core.seq_QMARK_.call(null, k) ? cljs.core.apply.call(null, cljs.core.hash_map, k) : k, k = cljs.core.get.call(null, l, new cljs.core.Keyword(null, "desc", "desc", 1016984067)), l = cljs.core.get.call(null, l, new cljs.core.Keyword(null, "date", "date", 1016980256));
-                    cljs.core.chunk_append.call(null, g, cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.meeting", "div.meeting", 3523981648), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), clojuremn.homepage.moment.call(null, [cljs.core.str(l), cljs.core.str("Z")].join("")).utc().format("MMMM Do, YYYY")], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), k], !0)], !0));
-                    h += 1
-                  }else {
-                    e = !0;
-                    break a
+  !0), "Map/directions"], !0)], !0), function() {
+    var a = clojuremn.homepage.meetings.call(null);
+    return cljs.core.list_STAR_.call(null, function() {
+      var b = clojuremn.homepage.upcoming_meeting.call(null, clojuremn.homepage.today.call(null), a);
+      return cljs.core.truth_(b) ? (b = cljs.core.seq_QMARK_.call(null, b) ? cljs.core.apply.call(null, cljs.core.hash_map, b) : b, cljs.core.get.call(null, b, new cljs.core.Keyword(null, "desc", "desc", 1016984067)), b = cljs.core.get.call(null, b, new cljs.core.Keyword(null, "date", "date", 1016980256)), b = clojuremn.homepage.moment.call(null, b, "YYYY-MM-DD").format("dddd, MMMM Do, YYYY"), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.upcoming-meeting", "div.upcoming-meeting", 
+      3385704889), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), "Upcoming Meeting: ", b, ", at 7:00pm"], !0)], !0)) : null
+    }(), function() {
+      return function c(a) {
+        return new cljs.core.LazySeq(null, !1, function() {
+          for(;;) {
+            var e = cljs.core.seq.call(null, a);
+            if(e) {
+              if(cljs.core.chunked_seq_QMARK_.call(null, e)) {
+                var f = cljs.core.chunk_first.call(null, e), g = cljs.core.count.call(null, f), h = cljs.core.chunk_buffer.call(null, g);
+                a: {
+                  for(var k = 0;;) {
+                    if(k < g) {
+                      var l = cljs.core._nth.call(null, f, k), m = cljs.core.seq_QMARK_.call(null, l) ? cljs.core.apply.call(null, cljs.core.hash_map, l) : l, l = cljs.core.get.call(null, m, new cljs.core.Keyword(null, "desc", "desc", 1016984067)), m = cljs.core.get.call(null, m, new cljs.core.Keyword(null, "date", "date", 1016980256));
+                      cljs.core.chunk_append.call(null, h, cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.meeting", "div.meeting", 3523981648), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), clojuremn.homepage.moment.call(null, m, "YYYY-MM-DD").format("MMMM Do, YYYY")], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), l], !0)], !0));
+                      k += 1
+                    }else {
+                      f = !0;
+                      break a
+                    }
                   }
+                  f = void 0
                 }
-                e = void 0
+                return f ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, h), c.call(null, cljs.core.chunk_rest.call(null, e))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, h), null)
               }
-              return e ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, g), b.call(null, cljs.core.chunk_rest.call(null, d))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, g), null)
+              h = cljs.core.first.call(null, e);
+              f = cljs.core.seq_QMARK_.call(null, h) ? cljs.core.apply.call(null, cljs.core.hash_map, h) : h;
+              h = cljs.core.get.call(null, f, new cljs.core.Keyword(null, "desc", "desc", 1016984067));
+              f = cljs.core.get.call(null, f, new cljs.core.Keyword(null, "date", "date", 1016980256));
+              return cljs.core.cons.call(null, cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.meeting", "div.meeting", 3523981648), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), clojuremn.homepage.moment.call(null, f, "YYYY-MM-DD").format("MMMM Do, YYYY")], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), h], !0)], !0), c.call(null, cljs.core.rest.call(null, e)))
             }
-            g = cljs.core.first.call(null, d);
-            e = cljs.core.seq_QMARK_.call(null, g) ? cljs.core.apply.call(null, cljs.core.hash_map, g) : g;
-            g = cljs.core.get.call(null, e, new cljs.core.Keyword(null, "desc", "desc", 1016984067));
-            e = cljs.core.get.call(null, e, new cljs.core.Keyword(null, "date", "date", 1016980256));
-            return cljs.core.cons.call(null, cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.meeting", "div.meeting", 3523981648), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), clojuremn.homepage.moment.call(null, [cljs.core.str(e), cljs.core.str("Z")].join("")).utc().format("MMMM Do, YYYY")], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), g], !0)], !0), b.call(null, cljs.core.rest.call(null, 
-            d)))
+            return null
           }
-          return null
-        }
-      }, null)
-    }.call(null, clojuremn.homepage.meetings)
+        }, null)
+      }.call(null, clojuremn.homepage.past_meetings.call(null, clojuremn.homepage.today.call(null), a))
+    }())
   }()], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "class", "class", 1108647146), "footer"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "https://github.com/bmaddy/clojure.mn"], !0), "Fork this site!"], !0)], !0)], !0))
 };
 clojuremn.core = {};
