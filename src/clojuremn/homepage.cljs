@@ -30,12 +30,11 @@
   (let [offset (if (-> moment .utc .isDST) "-0600" "-0500")]
     (.zone (moment) offset)))
 
-(defn upcoming-meeting [today meetings]
+(defn upcoming-meeting [today sorted-meetings]
   (let [today-str (.format today "YYYY-MM-DD")
         next-month-str (.format (.add today "months" 1) "YYYY-MM-DD")]
-    (last (filter #(and (<= today-str (:date %))
-                         (< (:date %) next-month-str))
-                   meetings))))
+    (last (filter #(<= today-str (:date %))
+                  sorted-meetings))))
 
 (defn past-meetings [today meetings]
   (filter #(< (:date %) (.format today "YYYY-MM-DD")) meetings))
@@ -87,7 +86,7 @@
                [:div.panel-heading.text-left [:em "Upcoming Meeting..."]]
                [:div.panel-body
                 [:h2 date-str ", at&nbsp;7:00pm"]
-                [:p desc]]]))
+                [:p.text-left desc]]]))
 
           (for [{:keys [date desc]} (past-meetings (today) meetings)]
             [:div.meeting

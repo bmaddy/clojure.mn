@@ -3507,16 +3507,16 @@ cljs.core.with_meta = function with_meta(b, c) {
     c && (b ? (c = (c = b.cljs$lang$protocol_mask$partition0$ & 262144) ? c : b.cljs$core$IWithMeta$, c = c ? !0 : b.cljs$lang$protocol_mask$partition0$ ? !1 : cljs.core.type_satisfies_.call(null, cljs.core.IWithMeta, b)) : c = cljs.core.type_satisfies_.call(null, cljs.core.IWithMeta, b), c = !c);
     return c
   }() ? with_meta.call(null, function() {
-    "undefined" === typeof cljs.core.t4357 && (cljs.core.t4357 = {}, cljs.core.t4357 = function(b, c, f, g) {
+    "undefined" === typeof cljs.core.t4437 && (cljs.core.t4437 = {}, cljs.core.t4437 = function(b, c, f, g) {
       this.meta = b;
       this.o = c;
       this.with_meta = f;
-      this.meta4358 = g;
+      this.meta4438 = g;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393217
-    }, cljs.core.t4357.cljs$lang$type = !0, cljs.core.t4357.cljs$lang$ctorStr = "cljs.core/t4357", cljs.core.t4357.cljs$lang$ctorPrWriter = function(b, c, f) {
-      return cljs.core._write.call(null, c, "cljs.core/t4357")
-    }, cljs.core.t4357.prototype.call = function() {
+    }, cljs.core.t4437.cljs$lang$type = !0, cljs.core.t4437.cljs$lang$ctorStr = "cljs.core/t4437", cljs.core.t4437.cljs$lang$ctorPrWriter = function(b, c, f) {
+      return cljs.core._write.call(null, c, "cljs.core/t4437")
+    }, cljs.core.t4437.prototype.call = function() {
       var b = function(b, c) {
         return cljs.core.apply.call(null, b.o, c)
       }, c = function(c, e) {
@@ -3533,17 +3533,17 @@ cljs.core.with_meta = function with_meta(b, c) {
       };
       c.cljs$core$IFn$_invoke$arity$variadic = b;
       return c
-    }(), cljs.core.t4357.prototype.apply = function(b, c) {
+    }(), cljs.core.t4437.prototype.apply = function(b, c) {
       b = this;
       return b.call.apply(b, [b].concat(c.slice()))
-    }, cljs.core.t4357.prototype.cljs$core$Fn$ = !0, cljs.core.t4357.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-      return this.meta4358
-    }, cljs.core.t4357.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-      return new cljs.core.t4357(this.meta, this.o, this.with_meta, c)
-    }, cljs.core.__GT_t4357 = function(b, c, f, g) {
-      return new cljs.core.t4357(b, c, f, g)
+    }, cljs.core.t4437.prototype.cljs$core$Fn$ = !0, cljs.core.t4437.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+      return this.meta4438
+    }, cljs.core.t4437.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+      return new cljs.core.t4437(this.meta, this.o, this.with_meta, c)
+    }, cljs.core.__GT_t4437 = function(b, c, f, g) {
+      return new cljs.core.t4437(b, c, f, g)
     });
-    return new cljs.core.t4357(c, b, with_meta, null)
+    return new cljs.core.t4437(c, b, with_meta, null)
   }(), c) : cljs.core._with_meta.call(null, b, c)
 };
 cljs.core.meta = function(a) {
@@ -14635,10 +14635,10 @@ clojuremn.homepage.today = function() {
   return clojuremn.homepage.moment.call(null).zone(a)
 };
 clojuremn.homepage.upcoming_meeting = function(a, b) {
-  var c = a.format("YYYY-MM-DD"), d = a.add("months", 1).format("YYYY-MM-DD");
+  var c = a.format("YYYY-MM-DD");
+  a.add("months", 1).format("YYYY-MM-DD");
   return cljs.core.last.call(null, cljs.core.filter.call(null, function(a) {
-    var b = c <= (new cljs.core.Keyword(null, "date", "date", 1016980256)).call(null, a);
-    return b ? (new cljs.core.Keyword(null, "date", "date", 1016980256)).call(null, a) < d : b
+    return c <= (new cljs.core.Keyword(null, "date", "date", 1016980256)).call(null, a)
   }, b))
 };
 clojuremn.homepage.past_meetings = function(a, b) {
@@ -14678,7 +14678,7 @@ clojuremn.homepage.index = function() {
       if(cljs.core.truth_(b)) {
         var c = cljs.core.seq_QMARK_.call(null, b) ? cljs.core.apply.call(null, cljs.core.hash_map, b) : b, b = cljs.core.get.call(null, c, new cljs.core.Keyword(null, "desc", "desc", 1016984067)), c = cljs.core.get.call(null, c, new cljs.core.Keyword(null, "date", "date", 1016980256)), c = clojuremn.homepage.moment.call(null, c, "YYYY-MM-DD").format("dddd, MMMM Do, YYYY");
         return cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.panel.panel-default", "div.panel.panel-default", 946665379), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.panel-heading.text-left", "div.panel-heading.text-left", 3728800071), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "em", "em", 1013907482), "Upcoming Meeting..."], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.panel-body", "div.panel-body", 
-        3798183098), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), c, ", at\x26nbsp;7:00pm"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), b], !0)], !0)], !0)
+        3798183098), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), c, ", at\x26nbsp;7:00pm"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.text-left", "p.text-left", 4380109851), b], !0)], !0)], !0)
       }
       return null
     }(), function() {

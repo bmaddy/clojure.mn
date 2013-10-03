@@ -11,13 +11,18 @@
          "Nate Young" "https://twitter.com/natesbrain"
          }
  :meetings [{:date "2013-12-04"
-             :desc [(link "Erik Rantapaa") ": Ad-hoc Logic - Sum Types and Pattern Matching"]}
+             :desc [(link "Brian Maddy") ": Report from Clojure Conj"
+                    [:br]
+                    (link "Erik Rantapaa") ": Ad-hoc Logic - Sum Types and Pattern Matching"]}
             {:date "2013-11-06"
-             :desc ["Beginner's night"]}
+             :desc ["Beginner's night"
+                    [:br]
+                    "Be sure to bring a laptop when you come. We'll go over some basic Clojure functions, help people get up and running, and apply some of the things we learn."]}
             {:date "2013-10-02"
              :desc [(link "Danny Gratzer") ": a talk about Haskell"
                     [:br]
-                    (link "Aaron Babcock") ": Clojure on AppEngine"]}
+                    (link "Aaron Babcock") ": Clojure on AppEngine"]
+             :attendee-count 8}
             {:date "2013-09-04"
              :desc ["Hack Fest"]
              :attendee-count 5}
