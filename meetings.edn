@@ -9,15 +9,28 @@
          "Ted Naleid" "https://twitter.com/tednaleid"
          "Scott Fritchie" "https://twitter.com/slfritchie"
          "Nate Young" "https://twitter.com/natesbrain"
+         "Michael Nygard" "https://twitter.com/mtnygard"
          }
- :meetings [{:date "2013-12-04"
+ :meetings [{:date "2014-02-05"
+             :desc [[:strong "No meeting in January"]
+                    " - "
+                    [:em "if you show up you'll just sit outside in the cold!"]
+                    [:br]
+                    [:br]
+                    [:strong "Beginner's night"]
+                    [:br]
+                    "Be sure to bring a laptop when you come. We'll go over some basic Clojure functions, help people get up and running, and apply some of the things we learn. "
+                    "We'll cover differnt topics than last time."]
+             :attendee-count 26}
+            {:date "2013-12-04"
              :desc [(link "Brian Maddy") ": Report from Clojure Conj"
                     [:br]
                     (link "Erik Rantapaa") ": Ad-hoc Logic - Sum Types and Pattern Matching"]}
             {:date "2013-11-06"
-             :desc ["Beginner's night"
+             :desc [[:strong "Beginner's night"]
                     [:br]
-                    "Be sure to bring a laptop when you come. We'll go over some basic Clojure functions, help people get up and running, and apply some of the things we learn."]}
+                    "Be sure to bring a laptop when you come. We'll go over some basic Clojure functions, help people get up and running, and apply some of the things we learn."]
+             :attendee-count 26}
             {:date "2013-10-02"
              :desc [(link "Danny Gratzer") ": a talk about Haskell"
                     [:br]
