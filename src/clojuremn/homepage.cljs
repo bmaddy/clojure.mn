@@ -8,22 +8,31 @@
 (def moment (node/require "moment"))
 
 (defn make-link
+  "makes a link to url if privided or looks up a url from the data."
   ([data name] (make-link data name (get-in data [:links name])))
   ([data name url]
      (if url
        [:a {:href url} name]
        name)))
 
+(defn make-link-replacer
+  "replaces all (link ...) with an actual call to make-link in a tree of data"
+  [data]
+  (fn link-replacer [node]
+    (cond
+      (and (list? node) (= (first node) 'link)) (apply make-link data (rest node))
+      (coll? node) (do (println (pr-str node))
+                         (mapv link-replacer node))
+      :else node)))
+
+
 (defn meetings []
   (let [data (edn/read-string (.readFileSync fs "meetings.edn" "utf8"))
-        link (partial make-link data)]
+        link-replacer (make-link-replacer data)]
     (reverse
      (sort-by :date (for [meeting (data :meetings)]
                    (assoc meeting :desc
-                          (for [[f & args :as str] (meeting :desc)]
-                            (if (= 'link f)
-                              (apply link args)
-                              str))))))))
+                          (map link-replacer (meeting :desc))))))))
 
 ;; function because we want to use the *current* time
 (defn today []

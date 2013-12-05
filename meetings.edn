@@ -20,12 +20,16 @@
                     [:strong "Beginner's night"]
                     [:br]
                     "Be sure to bring a laptop when you come. We'll go over some basic Clojure functions, help people get up and running, and apply some of the things we learn. "
-                    "We'll cover differnt topics than last time."]
-             :attendee-count 26}
+                    "We'll cover differnt topics than last time. This month: "
+                    [:ul.text-left
+                     [:li (link "Greg Allen") " talking about Java interop"]
+                     [:li "Something else"]]]
+            }
             {:date "2013-12-04"
-             :desc [(link "Brian Maddy") ": Report from Clojure Conj"
+             :desc [(link "Brian Maddy") " and " (link "Tom Marble") ": Report from Clojure Conj"
                     [:br]
-                    (link "Erik Rantapaa") ": Ad-hoc Logic - Sum Types and Pattern Matching"]}
+                    (link "Tom Marble") ": Bringing ClojureBridge to Minnesta"]
+             :attendee-count 6}
             {:date "2013-11-06"
              :desc [[:strong "Beginner's night"]
                     [:br]
