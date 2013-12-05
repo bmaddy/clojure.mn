@@ -28,7 +28,7 @@
             {:date "2013-12-04"
              :desc [(link "Brian Maddy") " and " (link "Tom Marble") ": Report from Clojure Conj"
                     [:br]
-                    (link "Tom Marble") ": Bringing ClojureBridge to Minnesta"]
+                    (link "Tom Marble") ": " (link "Bringing ClojureBridge to Minnesota" "http://info9.net/wiki/tmarble/posts/ClojureBridge_Minnesota/")]
              :attendee-count 6}
             {:date "2013-11-06"
              :desc [[:strong "Beginner's night"]

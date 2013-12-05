@@ -72,7 +72,7 @@
        [:p [:em "The Minnesota Clojure Users Group"]]
        [:p
         "Join our "
-        [:a {:href "http://groups.google.com/group/clojuremn"} "mailing list" ]
+        [:a {:href "https://groups.google.com/group/clojuremn/boxsubscribe"} "mailing list" ]
         ". Follow us on "
         [:a {:href "http://twitter.com/clojuremn"} "Twitter"]
         "."
