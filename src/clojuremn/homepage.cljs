@@ -54,6 +54,15 @@
        (hiccups/html content)
        "</html>"))
 
+(defn format-datetime [date]
+  (let [datetime (moment date "YYYY-MM-DD HH:mm")]
+    (if (.isValid datetime)
+      (.format datetime "dddd, MMMM Do, YYYY, [at&nbsp;]h:mma")
+      (str (-> date
+               (moment "YYYY-MM-DD")
+               (.format "dddd, MMMM Do, YYYY"))
+           ", at&nbsp;7:00pm"))))
+
 (defn index []
   (html5
    [:head
@@ -90,11 +99,11 @@
        (let [meetings (meetings)]
          (list*
           (if-let [{:keys [date desc]} (upcoming-meeting (today) meetings)]
-            (let [date-str (-> date (moment "YYYY-MM-DD") (.format "dddd, MMMM Do, YYYY"))]
+            (let [date-str (format-datetime date)]
               [:div.panel.panel-default
                [:div.panel-heading.text-left [:em "Upcoming Meeting..."]]
                [:div.panel-body
-                [:h2 date-str ", at&nbsp;7:00pm"]
+                [:h2 date-str]
                 [:p.text-left desc]]]))
 
           (for [{:keys [date desc]} (past-meetings (today) meetings)]

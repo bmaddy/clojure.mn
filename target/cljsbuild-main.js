@@ -14599,6 +14599,10 @@ clojuremn.homepage.html5 = function() {
   b.cljs$core$IFn$_invoke$arity$variadic = a;
   return b
 }();
+clojuremn.homepage.format_datetime = function(a) {
+  var b = clojuremn.homepage.moment.call(null, a, "YYYY-MM-DD HH:mm");
+  return cljs.core.truth_(b.isValid()) ? b.format("dddd, MMMM Do, YYYY, [at\x26nbsp;]h:mma") : [cljs.core.str(clojuremn.homepage.moment.call(null, a, "YYYY-MM-DD").format("dddd, MMMM Do, YYYY")), cljs.core.str(", at\x26nbsp;7:00pm")].join("")
+};
 clojuremn.homepage.index = function() {
   return clojuremn.homepage.html5.call(null, cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "head", "head", 1017102674), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "meta", "meta", 1017252215), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "name", "name", 1017277949), "viewport", new cljs.core.Keyword(null, "content", "content", 1965434859), "width\x3ddevice-width, initial-scale\x3d1.0"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, 
   "title", "title", 1124275658), "Clojure.mn - The Minnesota Clojure User Group"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "link", "link", 1017226092), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "rel", "rel", 1014017035), "stylesheet", new cljs.core.Keyword(null, "href", "href", 1017115293), "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "link", 
@@ -14613,9 +14617,9 @@ clojuremn.homepage.index = function() {
     return cljs.core.list_STAR_.call(null, function() {
       var b = clojuremn.homepage.upcoming_meeting.call(null, clojuremn.homepage.today.call(null), a);
       if(cljs.core.truth_(b)) {
-        var c = cljs.core.seq_QMARK_.call(null, b) ? cljs.core.apply.call(null, cljs.core.hash_map, b) : b, b = cljs.core.get.call(null, c, new cljs.core.Keyword(null, "desc", "desc", 1016984067)), c = cljs.core.get.call(null, c, new cljs.core.Keyword(null, "date", "date", 1016980256)), c = clojuremn.homepage.moment.call(null, c, "YYYY-MM-DD").format("dddd, MMMM Do, YYYY");
+        var c = cljs.core.seq_QMARK_.call(null, b) ? cljs.core.apply.call(null, cljs.core.hash_map, b) : b, b = cljs.core.get.call(null, c, new cljs.core.Keyword(null, "desc", "desc", 1016984067)), c = cljs.core.get.call(null, c, new cljs.core.Keyword(null, "date", "date", 1016980256)), c = clojuremn.homepage.format_datetime.call(null, c);
         return cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.panel.panel-default", "div.panel.panel-default", 946665379), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.panel-heading.text-left", "div.panel-heading.text-left", 3728800071), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "em", "em", 1013907482), "Upcoming Meeting..."], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.panel-body", "div.panel-body", 
-        3798183098), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), c, ", at\x26nbsp;7:00pm"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.text-left", "p.text-left", 4380109851), b], !0)], !0)], !0)
+        3798183098), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h2", "h2", 1013907516), c], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.text-left", "p.text-left", 4380109851), b], !0)], !0)], !0)
       }
       return null
     }(), function() {

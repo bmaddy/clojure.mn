@@ -11,19 +11,28 @@
          "Nate Young" "https://twitter.com/natesbrain"
          "Michael Nygard" "https://twitter.com/mtnygard"
          }
- :meetings [{:date "2014-02-05"
-             :desc [[:strong "No meeting in January"]
-                    " - "
-                    [:em "if you show up you'll just sit outside in the cold!"]
-                    [:br]
-                    [:br]
-                    [:strong "Beginner's night"]
+ :meetings [{:date "2014-03-05"
+             :desc [[:strong "Beginner's night"]
                     [:br]
                     "Be sure to bring a laptop when you come. We'll go over some basic Clojure functions, help people get up and running, and apply some of the things we learn. "
                     "We'll cover differnt topics than last time. This month: "
                     [:ul.text-left
                      [:li (link "Greg Allen") " talking about Java interop"]
-                     [:li "Something else"]]]
+                     [:li (link "Tom Marble") " showing how to build web applications in Clojure"]]]
+            }
+            {:date "2014-02-05 17:30 CST"
+             :desc [[:strong "Special Event at DevJam Studios"]
+                    [:br]
+                    [:em "Note the different time and place."]
+                    [:br]
+                    "Instead of our normal meeting, the DevJam guys have invited us to attend a talk by "
+                    (link "Michael Nygard")
+                    ". He will be giving a talk titled \"Immutable Values: Benefits of Value-Based Programming.\" We're encouraging everyone to attend that instead."
+                    [:br]
+                    [:ul.text-left
+                     [:li "When: " "5:30pm on February 5th"]
+                     [:li "Where: " (link "DevJam Studios" "http://devjam.com/venue/devjamstudios-2/")]
+                     [:li "Please register here: " (link "Immutable Values: Benefits of Value-Based Programming" "http://devjam.com/event/jam-session-february-5-2014-immutable-values-benefits-value-based-programming/")]]]
             }
             {:date "2013-12-04"
              :desc [(link "Brian Maddy") " and " (link "Tom Marble") ": Report from Clojure Conj"
