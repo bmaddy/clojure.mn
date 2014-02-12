@@ -21,8 +21,7 @@
   (fn link-replacer [node]
     (cond
       (and (list? node) (= (first node) 'link)) (apply make-link data (rest node))
-      (coll? node) (do (println (pr-str node))
-                         (mapv link-replacer node))
+      (coll? node) (mapv link-replacer node)
       :else node)))
 
 
@@ -95,6 +94,8 @@
        [:p.map
         [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413&hl=en&sll=44.988878,-93.255115&sspn=0.0095,0.02032&vpsrc=0&hnear=11+4th+St+NE,+Minneapolis,+Minnesota+55413&t=m&z=16"} "Map/directions"]]
 
+       [:p "Help grow our local Clojure community over at " [:a {:href "https://github.com/clojurebridge-minneapolis/organizing/"} "ClojureBridge"] "!"]
+
 
        (let [meetings (meetings)]
          (list*
@@ -112,7 +113,7 @@
                       (moment "YYYY-MM-DD")
                       (.format "MMMM Do, YYYY"))]
              [:p.text-left desc]])))
-       
+
 
        [:p {:class "footer"}
         [:a {:href "https://github.com/bmaddy/clojure.mn"} "Fork this site!"]]]]]

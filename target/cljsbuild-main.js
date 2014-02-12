@@ -14530,7 +14530,7 @@ clojuremn.homepage.make_link_replacer = function(a) {
   return function c(d) {
     var e;
     e = (e = cljs.core.list_QMARK_.call(null, d)) ? cljs.core._EQ_.call(null, cljs.core.first.call(null, d), new cljs.core.Symbol(null, "link", "link", -1637209677, null)) : e;
-    return e ? cljs.core.apply.call(null, clojuremn.homepage.make_link, a, cljs.core.rest.call(null, d)) : cljs.core.coll_QMARK_.call(null, d) ? (cljs.core.println.call(null, cljs.core.pr_str.call(null, d)), cljs.core.mapv.call(null, c, d)) : new cljs.core.Keyword(null, "else", "else", 1017020587) ? d : null
+    return e ? cljs.core.apply.call(null, clojuremn.homepage.make_link, a, cljs.core.rest.call(null, d)) : cljs.core.coll_QMARK_.call(null, d) ? cljs.core.mapv.call(null, c, d) : new cljs.core.Keyword(null, "else", "else", 1017020587) ? d : null
   }
 };
 clojuremn.homepage.meetings = function() {
@@ -14612,7 +14612,7 @@ clojuremn.homepage.index = function() {
   "href", "href", 1017115293), "https://groups.google.com/group/clojuremn/boxsubscribe"], !0), "mailing list"], !0), ". Follow us on ", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "http://twitter.com/clojuremn"], !0), "Twitter"], !0), "."], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "img", "img", 1014008629), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, 
   "id", "id", 1013907597), "logo", new cljs.core.Keyword(null, "src", "src", 1014018390), "/images/lambda.png"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.text-center", "p.text-center", 1569699817), "We meet the first Wednesday of the month at 7pm at\x26nbsp;", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "http://www.smartthings.com/"], 
   !0), "SmartThings"], !0), "."], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.map", "p.map", 1118816848), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "https://maps.google.com/maps?q\x3d11+4th+St+NE+%23300+Minneapolis,+MN+55413\x26hl\x3den\x26sll\x3d44.988878,-93.255115\x26sspn\x3d0.0095,0.02032\x26vpsrc\x3d0\x26hnear\x3d11+4th+St+NE,+Minneapolis,+Minnesota+55413\x26t\x3dm\x26z\x3d16"], 
-  !0), "Map/directions"], !0)], !0), function() {
+  !0), "Map/directions"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), "Help grow our local Clojure community over at ", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "https://github.com/clojurebridge-minneapolis/organizing/"], !0), "ClojureBridge"], !0), "!"], !0), function() {
     var a = clojuremn.homepage.meetings.call(null);
     return cljs.core.list_STAR_.call(null, function() {
       var b = clojuremn.homepage.upcoming_meeting.call(null, clojuremn.homepage.today.call(null), a);
