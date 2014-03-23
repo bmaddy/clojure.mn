@@ -11,7 +11,10 @@
          "Nate Young" "https://twitter.com/natesbrain"
          "Michael Nygard" "https://twitter.com/mtnygard"
          }
- :meetings [{:date "2014-03-05"
+ :meetings [{:date "2014-04-02"
+             :desc [(link "Brian Maddy") ": Functional Lenses"]
+            }
+{:date "2014-03-05"
              :desc [[:strong "Beginner's night"]
                     [:br]
                     "Be sure to bring a laptop when you come. We'll go over some basic Clojure functions, help people get up and running, and apply some of the things we learn. "
@@ -19,6 +22,7 @@
                     [:ul.text-left
                      [:li (link "Greg Allen") " talking about Java interop"]
                      [:li (link "Tom Marble") " showing how to build web applications in Clojure"]]]
+             :attendee-count 11
             }
             {:date "2014-02-05 17:30 CST"
              :desc [[:strong "Special Event at DevJam Studios"]
