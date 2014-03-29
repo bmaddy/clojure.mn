@@ -10,6 +10,9 @@ h1 {
 h2 {
     font-size: 18px;
     font-weight: bold;
+}
+
+.meetings h2 {
     margin-top: 30px;
 }
 

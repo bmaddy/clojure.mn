@@ -12,7 +12,9 @@
          "Michael Nygard" "https://twitter.com/mtnygard"
          }
  :meetings [{:date "2014-04-02"
-             :desc [(link "Brian Maddy") ": Functional Lenses"]
+             :desc [(link "Brian Maddy") ": Functional Lenses"
+                    [:br]
+                    (link "Tom Marble") ": ClojureBridge update"]
             }
 {:date "2014-03-05"
              :desc [[:strong "Beginner's night"]

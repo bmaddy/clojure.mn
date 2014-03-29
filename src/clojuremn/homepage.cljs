@@ -67,7 +67,7 @@
    [:head
     [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
     [:title "Clojure.mn - The Minnesota Clojure User Group"]
-    [:link {:rel "stylesheet" :href "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"}]
+    [:link {:rel "stylesheet" :href "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"}]
     [:link {:rel "stylesheet" :type "text/css" :href "/stylesheets/base.css"}]
     ]
    [:body
@@ -87,6 +87,17 @@
         ]
        [:img {:id "logo" :src "/images/lambda.png"}]
 
+
+       [:div.panel.panel-default
+        [:h2 "ClojureBridge is coming May 16-17th!"]
+        [:p "Join the "
+         [:a {:href "https://groups.google.com/group/clojuremn/boxsubscribe"} "Clojure.mn mailing list"]
+         " to keep updated or help with organizing over at the "
+         [:a {:href "https://github.com/clojurebridge-minneapolis/organizing/"} "GitHub page"]
+         " and "
+         [:a {:href "http://lists.info9.net/mailman/listinfo/clojurebridge-minneapolis"} "organizers' mailing list"] "."]]
+
+
        [:p.text-center "We meet the first Wednesday of the month at 7pm at&nbsp;"
         [:a {:href "http://www.smartthings.com/"} "SmartThings"]
         "."]
@@ -94,11 +105,8 @@
        [:p.map
         [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413&hl=en&sll=44.988878,-93.255115&sspn=0.0095,0.02032&vpsrc=0&hnear=11+4th+St+NE,+Minneapolis,+Minnesota+55413&t=m&z=16"} "Map/directions"]]
 
-       [:p "Help grow our local Clojure community over at " [:a {:href "https://github.com/clojurebridge-minneapolis/organizing/"} "ClojureBridge"] "!"]
-
-
        (let [meetings (meetings)]
-         (list*
+         (list
           (if-let [{:keys [date desc]} (upcoming-meeting (today) meetings)]
             (let [date-str (format-datetime date)]
               [:div.panel.panel-default
@@ -107,12 +115,13 @@
                 [:h2 date-str]
                 [:p.text-left desc]]]))
 
+[:div.meetings
           (for [{:keys [date desc]} (past-meetings (today) meetings)]
             [:div.meeting
              [:h2 (-> date
                       (moment "YYYY-MM-DD")
                       (.format "MMMM Do, YYYY"))]
-             [:p.text-left desc]])))
+             [:p.text-left desc]])]))
 
 
        [:p {:class "footer"}
