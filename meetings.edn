@@ -11,12 +11,24 @@
          "Nate Young" "https://twitter.com/natesbrain"
          "Michael Nygard" "https://twitter.com/mtnygard"
          }
- :meetings [{:date "2014-04-02"
-             :desc [(link "Brian Maddy") ": Functional Lenses"
+ :meetings [{:date "2014-05-07"
+             :desc [[:strong "Beginner's night"]
+                    [:br]
+                    "Be sure to bring a laptop when you come. In preparation for Minneapolis' ClojureBridge, we'll go through as much of the ClojureBridge curriculum as we can. If you can get the "
+                    (link "installation section" "https://github.com/ClojureBridge/curriculum/blob/master/outline/setup.md" )
+                    " done before you come, you'll be able to get much further. If not, we'll be happy to help."]
+             }
+            {:date "2014-04-02"
+             :desc [(link "Brian Maddy") ": Functional Lenses ("
+                    (link "presentation" "https://bmaddy-public.s3.amazonaws.com/presentations/clojure.mn/lenses.pdf" )
+                    ", "
+                    (link "code" "http://bmaddy-public.s3.amazonaws.com/presentations/clojure.mn/lenses_demo.clj")
+                    ")"
                     [:br]
                     (link "Tom Marble") ": ClojureBridge update"]
-            }
-{:date "2014-03-05"
+             :attendee-count 16
+             }
+            {:date "2014-03-05"
              :desc [[:strong "Beginner's night"]
                     [:br]
                     "Be sure to bring a laptop when you come. We'll go over some basic Clojure functions, help people get up and running, and apply some of the things we learn. "
