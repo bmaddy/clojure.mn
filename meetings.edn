@@ -11,7 +11,10 @@
          "Nate Young" "https://twitter.com/natesbrain"
          "Michael Nygard" "https://twitter.com/mtnygard"
          }
- :meetings [{:date "2014-05-07"
+ :meetings [{:date "2014-06-11"
+             :desc [(link "Michael Nygard") ": Simulation testing"]
+             }
+            {:date "2014-05-07"
              :desc [[:strong "Beginner's night"]
                     [:br]
                     "Be sure to bring a laptop when you come. In preparation for Minneapolis' ClojureBridge, we'll go through as much of the ClojureBridge curriculum as we can. If you can get the "

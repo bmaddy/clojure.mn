@@ -89,12 +89,9 @@
 
 
        [:div.panel.panel-default
-        [:h2 "ClojureBridge is coming May 16-17th!"]
-        [:p "Join the "
-         [:a {:href "https://groups.google.com/group/clojuremn/boxsubscribe"} "Clojure.mn mailing list"]
-         " to keep updated or help with organizing over at the "
-         [:a {:href "https://github.com/clojurebridge-minneapolis/organizing/"} "GitHub page"]
-         " and "
+        [:h2 [:a {:href "http://www.clojurebridge.org/"} "ClojureBridge"] " is coming May 16-17th!"]
+        [:p [:a {:href "http://clojurebridge-minneapolis.eventbrite.com/"} "Registration is now open!"]]
+        [:p "Interested in helping out? Join the "
          [:a {:href "http://lists.info9.net/mailman/listinfo/clojurebridge-minneapolis"} "organizers' mailing list"] "."]]
 
 
