@@ -20,6 +20,7 @@
                     "Be sure to bring a laptop when you come. In preparation for Minneapolis' ClojureBridge, we'll go through as much of the ClojureBridge curriculum as we can. If you can get the "
                     (link "installation section" "https://github.com/ClojureBridge/curriculum/blob/master/outline/setup.md" )
                     " done before you come, you'll be able to get much further. If not, we'll be happy to help."]
+             :attendee-count 14
              }
             {:date "2014-04-02"
              :desc [(link "Brian Maddy") ": Functional Lenses ("

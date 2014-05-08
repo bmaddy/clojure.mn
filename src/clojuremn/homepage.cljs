@@ -95,7 +95,7 @@
          [:a {:href "http://lists.info9.net/mailman/listinfo/clojurebridge-minneapolis"} "organizers' mailing list"] "."]]
 
 
-       [:p.text-center "We meet the first Wednesday of the month at 7pm at&nbsp;"
+       [:p.text-center "We meet the second Wednesday of the month at 7pm at&nbsp;"
         [:a {:href "http://www.smartthings.com/"} "SmartThings"]
         "."]
 
