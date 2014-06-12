@@ -10,9 +10,18 @@
          "Scott Fritchie" "https://twitter.com/slfritchie"
          "Nate Young" "https://twitter.com/natesbrain"
          "Michael Nygard" "https://twitter.com/mtnygard"
+         "mailing list" "https://groups.google.com/group/clojuremn/boxsubscribe"
          }
- :meetings [{:date "2014-06-11"
+ :meetings [{:date "2014-07-09"
+             :desc [[:strong "Beginner's night"]
+                    [:br]
+                    "Be sure to bring a laptop when you come. The specific topic hasn't been determined yet but it will be geared towards beginners. If you're interested in helping with this, email the "
+                    (link "mailing list")
+                    "."]
+             }
+            {:date "2014-06-11"
              :desc [(link "Michael Nygard") ": Simulation testing"]
+             :attendee-count 20
              }
             {:date "2014-05-07"
              :desc [[:strong "Beginner's night"]
