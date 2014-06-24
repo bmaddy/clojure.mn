@@ -11,13 +11,16 @@
          "Nate Young" "https://twitter.com/natesbrain"
          "Michael Nygard" "https://twitter.com/mtnygard"
          "mailing list" "https://groups.google.com/group/clojuremn/boxsubscribe"
+         "SICP" "https://mitpress.mit.edu/sicp/"
          }
  :meetings [{:date "2014-07-09"
              :desc [[:strong "Beginner's night"]
                     [:br]
-                    "Be sure to bring a laptop when you come. The specific topic hasn't been determined yet but it will be geared towards beginners. If you're interested in helping with this, email the "
-                    (link "mailing list")
-                    "."]
+                    (link "Professor Machkasova")
+                    " and some of her students (Henry Fellows, Aaron Lemmon, and Emma Sax) are coming down from the University of Minnesota, Morris. They will be showing LightTable settings and testing with the expectations library (including automated testing with autoexpect)."
+                    [:br]
+                    "After that we'll have a discussion about the first few sections in "
+                    (link "SICP")]
              }
             {:date "2014-06-11"
              :desc [(link "Michael Nygard") ": Simulation testing"]
