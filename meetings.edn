@@ -13,7 +13,13 @@
          "mailing list" "https://groups.google.com/group/clojuremn/boxsubscribe"
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
- :meetings [{:date "2014-08-13"
+
+ :meetings [{:date "2014-09-10"
+             :desc [[:strong "Beginner's night"]
+                    [:br]
+                    "Be sure to bring a laptop when you come. We'll go over Clojure's composite data types (vectors, lists, maps, sets), help people get up and running, and apply some of the things we learn."]
+             }
+            {:date "2014-08-13"
              :desc [(link "Steven Kallstrom") ": " (link "Instaparse" "https://github.com/Engelberg/instaparse")]
              }
             {:date "2014-07-09"
@@ -24,6 +30,7 @@
                     [:br]
                     "After that we'll have a discussion about the first few sections in "
                     (link "SICP")]
+             :attendee-count 26
              }
             {:date "2014-06-11"
              :desc [(link "Michael Nygard") ": Simulation testing"]
