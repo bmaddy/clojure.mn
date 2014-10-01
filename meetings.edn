@@ -14,10 +14,14 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2014-09-10"
+ :meetings [{:date "2014-10-08"
+             :desc [(link "Greg Allen") ": Using Clojure to get started with Data Mining in the Kaggle 'Titanic: Machine Learning from Disaster' competition"]
+             }
+            {:date "2014-09-10"
              :desc [[:strong "Beginner's night"]
                     [:br]
                     "Be sure to bring a laptop when you come. We'll go over Clojure's composite data types (vectors, lists, maps, sets), help people get up and running, and apply some of the things we learn."]
+             :attendee-count 10
              }
             {:date "2014-08-13"
              :desc [(link "Steven Kallstrom") ": " (link "Instaparse" "https://github.com/Engelberg/instaparse")]
