@@ -14,9 +14,13 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2014-10-08"
+ :meetings [{:date "2014-11-12"
+             :desc [[:strong "Beginner's night"]
+                    [:br]
+                    "Steven Kallstrom will show how to build a card game in Clojure. He'll cover basic leiningen, managing state with refs/atoms, manipulating collections, sets, combinatorics, and I/O."]}
+            {:date "2014-10-08"
              :desc [(link "Greg Allen") ": Using Clojure to get started with Data Mining in the Kaggle 'Titanic: Machine Learning from Disaster' competition"]
-             }
+             :attendee-count 14}
             {:date "2014-09-10"
              :desc [[:strong "Beginner's night"]
                     [:br]
