@@ -4,6 +4,7 @@
          "Benjamin Ebby" "http://twitter.com/akpanydre"
          "Brian Maddy" "http://twitter.com/bmaddy"
          "Dan Callahan" "http://dancallahan.info/"
+         "Peter Schwarz" "https://twitter.com/peterjschwarz"
          "Professor Machkasova" "http://personal.morris.umn.edu/~elenam/"
          "Tom Marble" "http://twitter.com/tmarble"
          "Ted Naleid" "https://twitter.com/tednaleid"
@@ -14,10 +15,19 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2014-11-12"
+ :meetings [{:date "2015-2-11"
+             :desc [(link "Jason Saxon") ": L-systems, Turtle graphics, and Quil"]
+             }
+            {:date "2014-12-10"
+             :desc [(link "Peter Schwarz") ": Using Clojure on Arduino"
+                    [:br]
+                    (link "Tom Marble") " and " (link "Ted Cushman") ": Clojure Conj recap"]
+             }
+            {:date "2014-11-12"
              :desc [[:strong "Beginner's night"]
                     [:br]
-                    "Steven Kallstrom will show how to build a card game in Clojure. He'll cover basic leiningen, managing state with refs/atoms, manipulating collections, sets, combinatorics, and I/O."]}
+                    "Steven Kallstrom will show how to build a card game in Clojure. He'll cover basic leiningen, managing state with refs/atoms, manipulating collections, sets, combinatorics, and I/O."]
+             :attendee-count 20}
             {:date "2014-10-08"
              :desc [(link "Greg Allen") ": Using Clojure to get started with Data Mining in the Kaggle 'Titanic: Machine Learning from Disaster' competition"]
              :attendee-count 14}
