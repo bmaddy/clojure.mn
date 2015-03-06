@@ -16,11 +16,11 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-3-11"
+ :meetings [{:date "2015-03-11"
              :desc [[:strong "Beginner's night"]
                     [:br]
                     (link "Brian Maddy") " will go over some of the basic concurrency tools in Clojure"]}
-            {:date "2015-2-11"
+            {:date "2015-02-11"
              :desc [(link "Jason Saxon") ": L-systems, Turtle graphics, and Quil"]
              :attendee-count 22
              }
