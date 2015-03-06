@@ -4,6 +4,7 @@
          "Benjamin Ebby" "http://twitter.com/akpanydre"
          "Brian Maddy" "http://twitter.com/bmaddy"
          "Dan Callahan" "http://dancallahan.info/"
+         "Jason Saxon" "http://twitter.com/to_json"
          "Peter Schwarz" "https://twitter.com/peterjschwarz"
          "Professor Machkasova" "http://personal.morris.umn.edu/~elenam/"
          "Tom Marble" "http://twitter.com/tmarble"
@@ -15,8 +16,13 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-2-11"
+ :meetings [{:date "2015-3-11"
+             :desc [[:strong "Beginner's night"]
+                    [:br]
+                    (link "Brian Maddy") " will go over some of the basic concurrency tools in Clojure"]}
+            {:date "2015-2-11"
              :desc [(link "Jason Saxon") ": L-systems, Turtle graphics, and Quil"]
+             :attendee-count 22
              }
             {:date "2014-12-10"
              :desc [(link "Peter Schwarz") ": Using Clojure on Arduino"
