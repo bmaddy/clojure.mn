@@ -28,6 +28,7 @@
              :desc [(link "Peter Schwarz") ": Using Clojure on Arduino"
                     [:br]
                     (link "Tom Marble") " and " (link "Ted Cushman") ": Clojure Conj recap"]
+             :attendee-count 17
              }
             {:date "2014-11-12"
              :desc [[:strong "Beginner's night"]
