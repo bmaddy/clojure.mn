@@ -65,6 +65,7 @@
 (defn index []
   (html5
    [:head
+    [:meta {:charset "utf-8"}]
     [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
     [:title "Clojure.mn - The Minnesota Clojure User Group"]
     [:link {:rel "stylesheet" :href "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"}]

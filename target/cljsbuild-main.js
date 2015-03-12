@@ -378,13 +378,6 @@ goog.base = function(a, b, c) {
 goog.scope = function(a) {
   a.call(goog.global)
 };
-goog.debug = {};
-goog.debug.Error = function(a) {
-  Error.captureStackTrace ? Error.captureStackTrace(this, goog.debug.Error) : this.stack = Error().stack || "";
-  a && (this.message = String(a))
-};
-goog.inherits(goog.debug.Error, Error);
-goog.debug.Error.prototype.name = "CustomError";
 goog.string = {};
 goog.string.Unicode = {NBSP:"\u00a0"};
 goog.string.startsWith = function(a, b) {
@@ -716,6 +709,13 @@ goog.string.parseInt = function(a) {
   isFinite(a) && (a = String(a));
   return goog.isString(a) ? /^\s*-?0x/i.test(a) ? parseInt(a, 16) : parseInt(a, 10) : NaN
 };
+goog.debug = {};
+goog.debug.Error = function(a) {
+  Error.captureStackTrace ? Error.captureStackTrace(this, goog.debug.Error) : this.stack = Error().stack || "";
+  a && (this.message = String(a))
+};
+goog.inherits(goog.debug.Error, Error);
+goog.debug.Error.prototype.name = "CustomError";
 goog.asserts = {};
 goog.asserts.ENABLE_ASSERTS = goog.DEBUG;
 goog.asserts.AssertionError = function(a, b) {
@@ -3507,16 +3507,16 @@ cljs.core.with_meta = function with_meta(b, c) {
     c && (b ? (c = (c = b.cljs$lang$protocol_mask$partition0$ & 262144) ? c : b.cljs$core$IWithMeta$, c = c ? !0 : b.cljs$lang$protocol_mask$partition0$ ? !1 : cljs.core.type_satisfies_.call(null, cljs.core.IWithMeta, b)) : c = cljs.core.type_satisfies_.call(null, cljs.core.IWithMeta, b), c = !c);
     return c
   }() ? with_meta.call(null, function() {
-    "undefined" === typeof cljs.core.t4437 && (cljs.core.t4437 = {}, cljs.core.t4437 = function(b, c, f, g) {
+    "undefined" === typeof cljs.core.t4307 && (cljs.core.t4307 = {}, cljs.core.t4307 = function(b, c, f, g) {
       this.meta = b;
       this.o = c;
       this.with_meta = f;
-      this.meta4438 = g;
+      this.meta4308 = g;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393217
-    }, cljs.core.t4437.cljs$lang$type = !0, cljs.core.t4437.cljs$lang$ctorStr = "cljs.core/t4437", cljs.core.t4437.cljs$lang$ctorPrWriter = function(b, c, f) {
-      return cljs.core._write.call(null, c, "cljs.core/t4437")
-    }, cljs.core.t4437.prototype.call = function() {
+    }, cljs.core.t4307.cljs$lang$type = !0, cljs.core.t4307.cljs$lang$ctorStr = "cljs.core/t4307", cljs.core.t4307.cljs$lang$ctorPrWriter = function(b, c, f) {
+      return cljs.core._write.call(null, c, "cljs.core/t4307")
+    }, cljs.core.t4307.prototype.call = function() {
       var b = function(b, c) {
         return cljs.core.apply.call(null, b.o, c)
       }, c = function(c, e) {
@@ -3533,17 +3533,17 @@ cljs.core.with_meta = function with_meta(b, c) {
       };
       c.cljs$core$IFn$_invoke$arity$variadic = b;
       return c
-    }(), cljs.core.t4437.prototype.apply = function(b, c) {
+    }(), cljs.core.t4307.prototype.apply = function(b, c) {
       b = this;
       return b.call.apply(b, [b].concat(c.slice()))
-    }, cljs.core.t4437.prototype.cljs$core$Fn$ = !0, cljs.core.t4437.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-      return this.meta4438
-    }, cljs.core.t4437.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-      return new cljs.core.t4437(this.meta, this.o, this.with_meta, c)
-    }, cljs.core.__GT_t4437 = function(b, c, f, g) {
-      return new cljs.core.t4437(b, c, f, g)
+    }, cljs.core.t4307.prototype.cljs$core$Fn$ = !0, cljs.core.t4307.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+      return this.meta4308
+    }, cljs.core.t4307.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+      return new cljs.core.t4307(this.meta, this.o, this.with_meta, c)
+    }, cljs.core.__GT_t4307 = function(b, c, f, g) {
+      return new cljs.core.t4307(b, c, f, g)
     });
-    return new cljs.core.t4437(c, b, with_meta, null)
+    return new cljs.core.t4307(c, b, with_meta, null)
   }(), c) : cljs.core._with_meta.call(null, b, c)
 };
 cljs.core.meta = function(a) {
@@ -14604,15 +14604,15 @@ clojuremn.homepage.format_datetime = function(a) {
   return cljs.core.truth_(b.isValid()) ? b.format("dddd, MMMM Do, YYYY, [at\x26nbsp;]h:mma") : [cljs.core.str(clojuremn.homepage.moment.call(null, a, "YYYY-MM-DD").format("dddd, MMMM Do, YYYY")), cljs.core.str(", at\x26nbsp;7:00pm")].join("")
 };
 clojuremn.homepage.index = function() {
-  return clojuremn.homepage.html5.call(null, cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "head", "head", 1017102674), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "meta", "meta", 1017252215), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "name", "name", 1017277949), "viewport", new cljs.core.Keyword(null, "content", "content", 1965434859), "width\x3ddevice-width, initial-scale\x3d1.0"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, 
-  "title", "title", 1124275658), "Clojure.mn - The Minnesota Clojure User Group"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "link", "link", 1017226092), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "rel", "rel", 1014017035), "stylesheet", new cljs.core.Keyword(null, "href", "href", 1017115293), "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "link", 
-  "link", 1017226092), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "rel", "rel", 1014017035), "stylesheet", new cljs.core.Keyword(null, "type", "type", 1017479852), "text/css", new cljs.core.Keyword(null, "href", "href", 1017115293), "/stylesheets/base.css"], !0)], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "body", "body", 1016933652), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div#content.container", "div#content.container", 
-  1998393676), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.row", "div.row", 2686478959), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div", "div", 1014003715), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "class", "class", 1108647146), "col-sm-offset-3 col-sm-6 text-center"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h1", "h1", 1013907515), "Clo", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, 
-  "em", "em", 1013907482), "j"], !0), "ure.mn"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "em", "em", 1013907482), "The Minnesota Clojure Users Group"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), "Join our ", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, 
-  "href", "href", 1017115293), "https://groups.google.com/group/clojuremn/boxsubscribe"], !0), "mailing list"], !0), ". Follow us on ", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "http://twitter.com/clojuremn"], !0), "Twitter"], !0), "."], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "img", "img", 1014008629), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, 
-  "id", "id", 1013907597), "logo", new cljs.core.Keyword(null, "src", "src", 1014018390), "/images/lambda.png"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.text-center", "p.text-center", 1569699817), "We meet the second Wednesday of the month at 7pm at\x26nbsp;", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "http://www.smartthings.com/"], 
-  !0), "SmartThings"], !0), "."], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.map", "p.map", 1118816848), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "https://maps.google.com/maps?q\x3d11+4th+St+NE+%23300+Minneapolis,+MN+55413\x26hl\x3den\x26sll\x3d44.988878,-93.255115\x26sspn\x3d0.0095,0.02032\x26vpsrc\x3d0\x26hnear\x3d11+4th+St+NE,+Minneapolis,+Minnesota+55413\x26t\x3dm\x26z\x3d16"], 
-  !0), "Map/directions"], !0)], !0), function() {
+  return clojuremn.homepage.html5.call(null, cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "head", "head", 1017102674), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "meta", "meta", 1017252215), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "charset", "charset", 1752978622), "utf-8"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "meta", "meta", 1017252215), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, 
+  "name", "name", 1017277949), "viewport", new cljs.core.Keyword(null, "content", "content", 1965434859), "width\x3ddevice-width, initial-scale\x3d1.0"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "title", "title", 1124275658), "Clojure.mn - The Minnesota Clojure User Group"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "link", "link", 1017226092), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "rel", "rel", 1014017035), 
+  "stylesheet", new cljs.core.Keyword(null, "href", "href", 1017115293), "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "link", "link", 1017226092), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "rel", "rel", 1014017035), "stylesheet", new cljs.core.Keyword(null, "type", "type", 1017479852), "text/css", new cljs.core.Keyword(null, "href", "href", 1017115293), "/stylesheets/base.css"], 
+  !0)], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "body", "body", 1016933652), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div#content.container", "div#content.container", 1998393676), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div.row", "div.row", 2686478959), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "div", "div", 1014003715), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, 
+  "class", "class", 1108647146), "col-sm-offset-3 col-sm-6 text-center"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "h1", "h1", 1013907515), "Clo", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "em", "em", 1013907482), "j"], !0), "ure.mn"], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "em", "em", 1013907482), "The Minnesota Clojure Users Group"], 
+  !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p", "p", 1013904354), "Join our ", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "https://groups.google.com/group/clojuremn/boxsubscribe"], !0), "mailing list"], !0), ". Follow us on ", cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, 
+  "href", "href", 1017115293), "http://twitter.com/clojuremn"], !0), "Twitter"], !0), "."], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "img", "img", 1014008629), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "id", "id", 1013907597), "logo", new cljs.core.Keyword(null, "src", "src", 1014018390), "/images/lambda.png"], !0)], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.text-center", "p.text-center", 1569699817), "We meet the second Wednesday of the month at 7pm at\x26nbsp;", 
+  cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "href", "href", 1017115293), "http://www.smartthings.com/"], !0), "SmartThings"], !0), "."], !0), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "p.map", "p.map", 1118816848), cljs.core.PersistentVector.fromArray([new cljs.core.Keyword(null, "a", "a", 1013904339), cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, 
+  "href", "href", 1017115293), "https://maps.google.com/maps?q\x3d11+4th+St+NE+%23300+Minneapolis,+MN+55413\x26hl\x3den\x26sll\x3d44.988878,-93.255115\x26sspn\x3d0.0095,0.02032\x26vpsrc\x3d0\x26hnear\x3d11+4th+St+NE,+Minneapolis,+Minnesota+55413\x26t\x3dm\x26z\x3d16"], !0), "Map/directions"], !0)], !0), function() {
     var a = clojuremn.homepage.meetings.call(null);
     return cljs.core.list.call(null, function() {
       var b = clojuremn.homepage.upcoming_meeting.call(null, clojuremn.homepage.today.call(null), a);
