@@ -1,5 +1,6 @@
 {:links {"Andrew Luetgers" "https://twitter.com/lootsauce"
          "Nick Bauman" "https://github.com/nickbauman/"
+         "Benoît Fleury" "https://twitter.com/benfle"
          "Ben Peirce" "http://bpeirce.me"
          "Benjamin Ebby" "http://twitter.com/akpanydre"
          "Brian Maddy" "http://twitter.com/bmaddy"
@@ -16,10 +17,13 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-03-11"
+ :meetings [{:date "2015-04-08"
+             :desc [(link "Benoît Fleury") ": Topic TBD."]}
+            {:date "2015-03-11"
              :desc [[:strong "Beginner's night"]
                     [:br]
-                    (link "Brian Maddy") " will go over some of the basic concurrency tools in Clojure"]}
+                    (link "Brian Maddy") " will go over some of the basic concurrency tools in Clojure"]
+             :attendee-count 24}
             {:date "2015-02-11"
              :desc [(link "Jason Saxon") ": L-systems, Turtle graphics, and Quil"]
              :attendee-count 22
@@ -28,8 +32,7 @@
              :desc [(link "Peter Schwarz") ": Using Clojure on Arduino"
                     [:br]
                     (link "Tom Marble") " and " (link "Ted Cushman") ": Clojure Conj recap"]
-             :attendee-count 17
-             }
+             :attendee-count 17}
             {:date "2014-11-12"
              :desc [[:strong "Beginner's night"]
                     [:br]
