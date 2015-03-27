@@ -17,8 +17,16 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-04-08"
+ :meetings [{:date "2015-05-13"
              :desc [(link "Benoît Fleury") ": Topic TBD."]}
+            {:date "2015-04-08"
+             :desc [[:strong (link "Office Hours" "http://blog.factual.com/clojure-office-hours")]
+                    [:br]
+                    "We're trying something new this month. We'll be having an 'office hours' style meeting as "
+                    (link "Factual describes here" "http://blog.factual.com/clojure-office-hours")
+                    ". Everyone will get a nametag and put their name on the board as a teacher, student, or both. Whether you want to come teach someone about the new library you just discovered or you need help completing your first "
+                    (link "4Clojure" "http://www.4clojure.com/")
+                    " problem, there should be plenty of people to chat with!"]}
             {:date "2015-03-11"
              :desc [[:strong "Beginner's night"]
                     [:br]
