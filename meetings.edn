@@ -26,7 +26,8 @@
                     (link "Factual describes here" "http://blog.factual.com/clojure-office-hours")
                     ". Everyone will get a nametag and put their name on the board as a teacher, student, or both. Whether you want to come teach someone about the new library you just discovered or you need help completing your first "
                     (link "4Clojure" "http://www.4clojure.com/")
-                    " problem, there should be plenty of people to chat with!"]}
+                    " problem, there should be plenty of people to chat with!"]
+             :attendee-count 14}
             {:date "2015-03-11"
              :desc [[:strong "Beginner's night"]
                     [:br]
