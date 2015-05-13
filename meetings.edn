@@ -18,7 +18,9 @@
          }
 
  :meetings [{:date "2015-05-13"
-             :desc [(link "Benoît Fleury") ": Topic TBD."]}
+             :desc [(link "Benoît Fleury") ": Software design and the ideas discussed in "
+                    (link "this paper" "http://dl.acm.org/citation.cfm?id=361623") "."]
+                    }
             {:date "2015-04-08"
              :desc [[:strong (link "Office Hours" "http://blog.factual.com/clojure-office-hours")]
                     [:br]

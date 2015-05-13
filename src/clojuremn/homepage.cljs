@@ -90,7 +90,7 @@
 
 
        [:p.text-center "We meet the second Wednesday of the month at 7pm at&nbsp;"
-        [:a {:href "http://www.smartthings.com/"} "SmartThings"]
+        [:a {:href "http://softwareforgood.com/"} "Software for Good"]
         "."]
 
        [:p.map
