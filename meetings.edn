@@ -17,10 +17,18 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-05-13"
+ :meetings [{:date "2015-07-08"
+             :desc [(link "Elena Machkasova") "and her students will talk about developing beginner friendly error messages for Clojure."]
+             }
+            {:date "2015-06-10"
+             :desc [[:strong "Beginner's night"]
+                    [:br]
+                    (link "Peter Schwarz") " will go give an introduction to using figwheel to get started with ClojureScript (Clojure that compiles to JavaScript)"]
+             }
+            {:date "2015-05-13"
              :desc [(link "Benoît Fleury") ": Software design and the ideas discussed in "
                     (link "this paper" "http://dl.acm.org/citation.cfm?id=361623") "."]
-                    }
+             :attendee-count 15}
             {:date "2015-04-08"
              :desc [[:strong (link "Office Hours" "http://blog.factual.com/clojure-office-hours")]
                     [:br]
