@@ -5,6 +5,7 @@
          "Benjamin Ebby" "http://twitter.com/akpanydre"
          "Brian Maddy" "http://twitter.com/bmaddy"
          "Dan Callahan" "http://dancallahan.info/"
+         "Karl Kroening" "https://twitter.com/karlkroening"
          "Jason Saxon" "http://twitter.com/to_json"
          "Peter Schwarz" "https://twitter.com/peterjschwarz"
          "Elena Machkasova" "http://personal.morris.umn.edu/~elenam/"
@@ -17,7 +18,13 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-07-08"
+ :meetings [{:date "2015-09-09"
+             :desc [(link "Karl Kroening") " will talk about realtime signal processing in Clojure with LLVM."]
+             }
+            {:date "2015-08-12"
+             :desc ["TBD."]
+             }
+            {:date "2015-07-08"
              :desc [(link "Elena Machkasova") " and her students (Henry Fellows, Thomas Hagen, Ryan McArthur, and Sean Stockholm) will talk about beginner-friendly Clojure error messages and the super-" (link "fun mode" "https://github.com/quil/quil/wiki/Functional-mode-(fun-mode)") " of Quil."]
              }
             {:date "2015-06-10"
