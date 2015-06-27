@@ -7,6 +7,7 @@
          "Dan Callahan" "http://dancallahan.info/"
          "Karl Kroening" "https://twitter.com/karlkroening"
          "Jason Saxon" "http://twitter.com/to_json"
+         "Joel Knighton" "https://twitter.com/joelknighton"
          "Peter Schwarz" "https://twitter.com/peterjschwarz"
          "Elena Machkasova" "http://personal.morris.umn.edu/~elenam/"
          "Tom Marble" "http://twitter.com/tmarble"
@@ -18,7 +19,10 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-09-09"
+ :meetings [{:date "2015-10-14"
+             :desc [(link "Joel Knighton") " will talk about datalog."]
+             }
+            {:date "2015-09-09"
              :desc [(link "Karl Kroening") " will talk about realtime signal processing in Clojure with LLVM."]
              }
             {:date "2015-08-12"
