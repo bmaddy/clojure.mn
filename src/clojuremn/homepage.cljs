@@ -94,7 +94,8 @@
         "."]
 
        [:p.map
-        [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413&hl=en&sll=44.988878,-93.255115&sspn=0.0095,0.02032&vpsrc=0&hnear=11+4th+St+NE,+Minneapolis,+Minnesota+55413&t=m&z=16"} "Map/directions"]]
+        [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413&hl=en&sll=44.988878,-93.255115&sspn=0.0095,0.02032&vpsrc=0&hnear=11+4th+St+NE,+Minneapolis,+Minnesota+55413&t=m&z=16"} "Map/directions"]
+        " (" [:a {:href "http://sfg.io/park"} "parking"] ")"]
 
        (let [meetings (meetings)]
          (list
