@@ -19,15 +19,17 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-10-14"
+ :meetings [{:date "2015-11-11"
+             :desc [(link "Ted Cushman") " will talk about the merits of schemas."]}
+            {:date "2015-10-14"
              :desc [(link "Joel Knighton") " will talk about datalog."]
-             }
+             :attendee-count 13}
             {:date "2015-09-09"
              :desc [(link "Karl Kroening") " will talk about realtime signal processing in Clojure with LLVM."]
-             }
+             :attendee-count 14}
             {:date "2015-08-12"
              :desc [(link "Ted Cushman") " will talk about declarative data transformations."]
-             }
+             :attendee-count 13}
             {:date "2015-07-08"
              :desc [(link "Elena Machkasova") " and her students (Henry Fellows, Thomas Hagen, Ryan McArthur, and Sean Stockholm) will talk about beginner-friendly Clojure error messages and the super-" (link "fun mode" "https://github.com/quil/quil/wiki/Functional-mode-(fun-mode)") " of Quil."]
              :attendee-count 17}
