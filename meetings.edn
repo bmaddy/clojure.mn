@@ -19,7 +19,7 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [#_{:date "2015-12-09"
+ :meetings [{:date "2015-12-09"
              :desc [(link "Ted Cushman") " will talk about the merits of schemas."]}
             {:date "2015-11-11"
              :desc [(link "Selah Ben-Haim") " will talk about using Instaparse and Datomic to calculate data lineage from SQL scripts."]}
