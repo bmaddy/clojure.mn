@@ -20,9 +20,9 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2016-01-10"
+ :meetings [{:date "2016-02-10"
              :desc [(link "Ted Cushman") " will talk about the merits of schemas."]}
-            {:date "2015-12-05 17:30 CST"
+            {:date "2015-12-09 17:30 CST"
              :desc [[:strong "Special Event at DevJam Studios"]
                     [:br]
                     [:em "Note the different time and place."]
