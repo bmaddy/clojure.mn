@@ -20,8 +20,22 @@
          "SICP" "https://mitpress.mit.edu/sicp/"
          }
 
- :meetings [{:date "2015-12-09"
+ :meetings [{:date "2016-01-10"
              :desc [(link "Ted Cushman") " will talk about the merits of schemas."]}
+            {:date "2015-12-05 17:30 CST"
+             :desc [[:strong "Special Event at DevJam Studios"]
+                    [:br]
+                    [:em "Note the different time and place."]
+                    [:br]
+                    "Instead of our normal meeting, we'll be attending a talk by "
+                    (link "Michael Nygard")
+                    " (author of " [:em "Release It"]" and a Cognitect employee). He will be giving a talk titled \"Maneuverable Architecture\". We're encouraging everyone to attend that instead."
+                    [:br]
+                    [:ul.text-left
+                     [:li "When: " "5:30pm on December 9th"]
+                     [:li "Where: " (link "DevJam Studios" "http://devjam.com/2015/10/29/jam-session-with-mike-nygard/")]
+                     [:li "Please RSVP here: " (link "Maneuverable Architecture" "http://devjam.com/2015/10/29/jam-session-with-mike-nygard/")]]]
+             }
             {:date "2015-11-11"
              :desc [(link "Selah Ben-Haim") " will talk about using Instaparse and Datomic to calculate data lineage from SQL scripts."]
              :attendee-count 9}
