@@ -79,23 +79,37 @@
       [:div {:class "col-sm-offset-3 col-sm-6 text-center"}
        [:h1 "Clo" [:em "j"] "ure.mn"]
        [:p [:em "The Minnesota Clojure Users Group"]]
-       [:p
-        "Join our "
-        [:a {:href "https://groups.google.com/group/clojuremn/boxsubscribe"} "mailing list" ]
-        ". Follow us on "
-        [:a {:href "http://twitter.com/clojuremn"} "Twitter"]
-        "."
-        ]
-       [:img {:id "logo" :src "/images/lambda.png"}]
+
+       [:div.panel.panel-default
+        [:div.panel-heading [:h2 "We've moved!"]]
+        [:div.panel-body
+         "We are now hosted at "
+         [:a {:href "http://www.meetup.com/clojuremn/"} "Meetup.com"]
+         ". Please join our group there for information about "
+         [:a {:href "http://www.meetup.com/clojuremn/"} "upcoming"] " and "
+         [:a {:href "http://www.meetup.com/clojuremn/events/past/"} "recent"]
+         " meetings. This page only exists for historical reasons."]]
+
+       ;;[:h4 "Older meetings (2015 and before):"]
+
+       (comment
+         [:p
+          "Join our "
+          [:a {:href "https://groups.google.com/group/clojuremn/boxsubscribe"} "mailing list" ]
+          ". Follow us on "
+          [:a {:href "http://twitter.com/clojuremn"} "Twitter"]
+          "."
+          ]
+         [:img {:id "logo" :src "/images/lambda.png"}]
 
 
-       [:p.text-center "We meet the second Wednesday of the month at 7pm at&nbsp;"
-        [:a {:href "http://softwareforgood.com/"} "Software for Good"]
-        "."]
+         [:p.text-center "We meet the second Wednesday of the month at 7pm at&nbsp;"
+          [:a {:href "http://softwareforgood.com/"} "Software for Good"]
+          "."]
 
-       [:p.map
-        [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413&hl=en&sll=44.988878,-93.255115&sspn=0.0095,0.02032&vpsrc=0&hnear=11+4th+St+NE,+Minneapolis,+Minnesota+55413&t=m&z=16"} "Map/directions"]
-        " (" [:a {:href "http://sfg.io/park"} "parking"] ")"]
+         [:p.map
+          [:a {:href "https://maps.google.com/maps?q=11+4th+St+NE+%23300+Minneapolis,+MN+55413&hl=en&sll=44.988878,-93.255115&sspn=0.0095,0.02032&vpsrc=0&hnear=11+4th+St+NE,+Minneapolis,+Minnesota+55413&t=m&z=16"} "Map/directions"]
+          " (" [:a {:href "http://sfg.io/park"} "parking"] ")"])
 
        (let [meetings (meetings)]
          (list
